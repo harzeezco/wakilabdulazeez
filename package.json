@@ -1,0 +1,16 @@
+{
+	"name": "mern-ecommerce",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"frontend": "cd frontend && npm run dev",
+		"backend": "cd backend && npm run dev",
+		"start": "concurrently \"npm run frontend\" \"npm run backend\""
+	},
+	"author": "wakil azeez",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.19.2"
+	}
+}
