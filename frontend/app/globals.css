@@ -30,4 +30,47 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .perspective {
+    perspective: 120px;
+    perspective-origin: bottom;
+  }
+
+  .mouse {
+    width: 20px;
+    height: 30px;
+    border: 2px solid #fff;
+    border-radius: 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mouse::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 1.3s infinite;
+    -webkit-animation: wheel 1.3s infinite;
+  }
+
+  @keyframes wheel {
+    to {
+      opacity: 0;
+      top: 27px;
+    }
+  }
+
+  @-webkit-keyframes wheel {
+    to {
+      opacity: 0;
+      top: 27px;
+    }
+  }
 }
