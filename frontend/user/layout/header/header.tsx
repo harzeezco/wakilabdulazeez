@@ -183,7 +183,7 @@ export function Header() {
 
         <HoverBorderGradient
           as='button'
-          className='flex items-center space-x-2 bg-white text-black dark:bg-black dark:text-white'
+          className='flex items-center space-x-2 uppercase'
           containerClassName='rounded-full'
         >
           Say Hello

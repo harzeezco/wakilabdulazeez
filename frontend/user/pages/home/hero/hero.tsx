@@ -10,7 +10,7 @@ import {
 } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '@/user/elements/moving-button';
+import { SparklesCore } from '@/user/elements/sparkles-core';
 
 export const products = [
   {
@@ -261,5 +261,28 @@ export function HeroParallax({
 }
 
 export function HeroParallaxDemo() {
-  return <HeroParallax products={products} />;
+  return (
+    <div>
+      <HeroParallax products={products} />
+      <div className='relative mx-auto mt-10 h-40 w-[40rem]'>
+        {/* Gradients */}
+        <div className='absolute inset-x-20 top-0 h-[2px] w-3/4 bg-gradient-to-r from-transparent via-indigo-500 to-transparent blur-sm' />
+        <div className='absolute inset-x-20 top-0 h-px w-3/4 bg-gradient-to-r from-transparent via-indigo-500 to-transparent' />
+        <div className='absolute inset-x-60 top-0 h-[5px] w-1/4 bg-gradient-to-r from-transparent via-sky-500 to-transparent blur-sm' />
+        <div className='absolute inset-x-60 top-0 h-px w-1/4 bg-gradient-to-r from-transparent via-sky-500 to-transparent' />
+
+        {/* Core component */}
+        <SparklesCore
+          background='transparent'
+          className='size-full'
+          maxSize={1}
+          minSize={0.4}
+          particleColor='#FFFFFF'
+          particleDensity={1200}
+        />
+
+        <div className='absolute inset-0 size-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]' />
+      </div>
+    </div>
+  );
 }

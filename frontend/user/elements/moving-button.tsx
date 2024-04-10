@@ -38,12 +38,12 @@ export function HoverBorderGradient({
   };
 
   const movingMap: Record<Direction, string> = {
-    TOP: 'radial-gradient(20.7% 50% at 50% 0%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)',
-    LEFT: 'radial-gradient(16.6% 43.1% at 0% 50%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)',
+    TOP: 'radial-gradient(20.7% 50% at 50% 0%, #3275F8 0%, rgba(255, 255, 255, 0) 100%)',
+    LEFT: 'radial-gradient(16.6% 43.1% at 0% 50%, #3275F8 0%, rgba(255, 255, 255, 0) 100%)',
     BOTTOM:
-      'radial-gradient(20.7% 50% at 50% 100%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)',
+      'radial-gradient(20.7% 50% at 50% 100%, #3275F8 0%, rgba(255, 255, 255, 0) 100%)',
     RIGHT:
-      'radial-gradient(16.2% 41.199999999999996% at 100% 50%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)',
+      'radial-gradient(16.2% 41.199999999999996% at 100% 50%, #3275F8 0%, rgba(255, 255, 255, 0) 100%)',
   };
 
   const highlight =
@@ -73,7 +73,7 @@ export function HoverBorderGradient({
     >
       <div
         className={cn(
-          'w-auto text-[#191930] z-10 bg-black px-7 py-2 rounded-[inherit]',
+          'w-auto text-[#191930] z-10 bg-black px-10 text-sm py-2 rounded-[inherit] font-semibold',
           className
         )}
         style={{ backgroundImage: 'linear-gradient(#dce6ff, #848faa)' }}
