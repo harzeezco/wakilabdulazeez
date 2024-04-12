@@ -17,12 +17,14 @@ const menu = {
     open: {
         width: '350px',
         height: '350px',
-        top: '40px',
+    top: '40px',
+        opacity: 1,
         right: '-25px',
         transition: { duration: 0.75, type: 'tween', ease: [0.76, 0, 0.24, 1] }
     },
     closed: {
         width: '100px',
+        opacity: 0,
         height: '0px',
         top: '40px',
         right: '0px',
@@ -84,22 +86,22 @@ const Courses: CardType[] = [
       {
           icon: <IoHome color='#191930' size={25} />,
         title: 'Home',
-        href: '/devops',
+        href: '/',
       },
       {
         icon: <RxAvatar color='#191930' size={25} />,
         title: 'About',
-        href: '/cloud-computing',
+        href: '/about',
   },
  {
         icon: <FaRegFolderOpen color='#191930' size={25} />,
         title: 'Projects',
-        href: '/devops',
+        href: '/projects',
       },
       {
         icon: <FaPhoneVolume color='#191930' size={25} />,
         title: 'Contact',
-        href: '/cloud-computing',
+        href: '/contact',
       },
 ];
 
@@ -112,7 +114,7 @@ function Card({ href, icon, idx, title }: CardType & { idx: number }) {
       initial='initial'
       variants={perspective}
     >
-      <Link className='shadow-in flex h-[120px] w-[150px] flex-col items-center justify-center gap-3 rounded-2xl border-solid bg-[#171717] p-4 transition-all duration-200 hover:bg-black/45' href={href}>
+      <Link className='border-dark-400/20 bg-dark-600 flex h-[120px] w-[150px] flex-col items-center justify-center gap-3 rounded-2xl border border-solid p-4 transition-all duration-200 hover:bg-[#14142B]/20' href={href}>
         <div
           className='size-10 rounded-full p-2'
           style={{ backgroundImage: 'linear-gradient(#dce6ff, #848faa)' }}
@@ -150,7 +152,7 @@ export function Header() {
       <div>
         <motion.div
           animate={isActive ? 'open' : 'closed'}
-          className='shadow-out fixed left-1/2 top-20 z-50 flex -translate-x-1/2  rounded-2xl bg-black'
+          className='border-dark-400/20 fixed left-1/2 top-20 z-50 flex -translate-x-1/2 rounded-2xl border  border-solid bg-[#14142B]'
           initial='closed'
           variants={menu}
           onMouseEnter={() => setIsActive(true)}
@@ -172,10 +174,10 @@ export function Header() {
           src='/images/Me.png'
           width={60}
         />
-        <h1 className='pr-1 text-lg font-semibold'>Wakil</h1>
+        <h1 className='pr-1 text-lg font-semibold uppercase'>Wakil</h1>
 
         <span className={cn('pointer-events-none', isActive && 'invisible opacity-0 transition-all')}>
-          <FaHamburger size={20} />
+          <FaHamburger color='#FAFBFC' size={20} />
         </span>
       </div>
 

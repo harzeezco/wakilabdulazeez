@@ -1,28 +1,42 @@
-import Image from 'next/image';
-import { CardBody, CardContainer, CardItem } from '@/user/elements/3d-card';
-import Link from 'next/link';
+import {
+  CardBody,
+  CardContainer,
+  CardItem,
+} from '@/user/elements/3d-card';
 import { InfiniteMovingCards } from '@/user/elements/infinite-moving-cards';
-import { FaLocationArrow, FaLinkedin, FaInstagram, FaSquareXTwitter, FaGithub } from 'react-icons/fa6';
 import { cn } from '@/utils/cn';
+import Image from 'next/image';
+import Link from 'next/link';
+import { FaBookOpen, FaRegCopy } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaLocationArrow,
+  FaSquareXTwitter,
+} from 'react-icons/fa6';
 
 const ABOUT = [
   {
     year: '25 jan',
     title: 'Started a new mobile design project.',
   },
-    {
+  {
     year: '25 jan',
-    title: 'Received a certification in advanced UX design techniques.',
+    title:
+      'Received a certification in advanced UX design techniques.',
   },
-      {
+  {
     year: '25 jan',
-    title: 'Completed a user research phase for an ongoing web design project.',
+    title:
+      'Completed a user research phase for an ongoing web design project.',
   },
-        {
+  {
     year: '25 jan',
-    title: 'Attended a workshop on the latest trends in UI animation.',
+    title:
+      'Attended a workshop on the latest trends in UI animation.',
   },
-        {
+  {
     year: '25 jan',
     title: 'Launched a redesigned website for a major client.',
   },
@@ -34,29 +48,29 @@ const socialMediaLinks = [
     icon: <FaLinkedin size={24} />,
     label: 'LinkedIn',
     url: 'https://www.linkedin.com/',
-    brand: '#0077B5'
+    brand: '#0077B5',
   },
   {
     id: 2,
     icon: <FaInstagram size={24} />,
     label: 'Instagram',
     url: 'https://www.instagram.com/',
-    brand: '#C13584'
+    brand: '#C13584',
   },
   {
     id: 3,
     icon: <FaSquareXTwitter size={24} />,
     label: 'Twitter',
     url: 'https://twitter.com/',
-    brand: '#1DA1F2'
+    brand: '#1DA1F2',
   },
   {
     id: 4,
     icon: <FaGithub size={24} />,
     label: 'GitHub',
     url: 'https://github.com/',
-    brand: '#181717'
-  }
+    brand: '#181717',
+  },
 ];
 
 export const TECHNOLOGIES = [
@@ -95,7 +109,7 @@ export const TECHNOLOGIES = [
     logo: 'icon-socket.svg',
     url: 'https://socket.io/',
   },
- {
+  {
     label: 'PostgreSQL',
     logo: 'icon-postgresql.svg',
     url: 'https://www.postgresql.org/',
@@ -139,20 +153,17 @@ export const TECHNOLOGIES = [
 
 export function Main() {
   return (
-    <section className='bg-grid-white/[0.05]'>
-      <div className='relative mx-auto grid max-w-5xl grid-cols-7 gap-7'>
-        <div
-          className='grid_1'
-        >
+    <section className='mx-auto max-w-5xl'>
+      <div className='relative grid grid-cols-7 gap-7'>
+        <div className='grid_1'>
           <CardContainer className='bg-dot-white/[0.2] bg-dot-black/[0.2] relative'>
-
-            <CardBody className='group/card relative size-full rounded-[22px] border border-black/[0.1] p-6 hover:shadow-2xl dark:border-white/[0.2] dark:hover:shadow-emerald-500/[0.1]'>
+            <CardBody className='group/card relative size-full rounded-[2vw] border-dark-400/20 border border-solid p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
               <CardItem
                 as='h1'
-                className='text-gradient text-center text-3xl font-bold uppercase'
+                className='text-gradient text-center text-3xl font-bold tracking-[0.3em]'
                 translateZ='50'
               >
-                About Me
+                about me
               </CardItem>
 
               <CardItem className='mt-4 w-full' translateZ='100'>
@@ -172,25 +183,24 @@ export function Main() {
                   target='__blank'
                   translateZ={20}
                 >
-                  Try now <span className='duration-200 group-hover/card:translate-x-3 group-hover/card:transition-all'>→</span>
+                  Try now{' '}
+                  <span className='duration-200 group-hover/card:translate-x-3 group-hover/card:transition-all'>
+                    →
+                  </span>
                 </CardItem>
               </div>
             </CardBody>
           </CardContainer>
-
         </div>
-        <div
-          className='grid_2'
-        >
+        <div className='grid_2'>
           <CardContainer className='bg-dot-white/[0.2] bg-dot-black/[0.2] relative'>
-
-            <CardBody className='group/card relative size-full rounded-[22px] border border-black/[0.1] p-6 hover:shadow-2xl dark:border-white/[0.2] dark:hover:shadow-emerald-500/[0.1]'>
+            <CardBody className='group/card relative size-full rounded-[2vw] border-black/[0.1] p-6 hover:shadow-2xl border-dark-400/20 border border-solid hover:shadow-emerald-500/[0.1]'>
               <CardItem
                 as='h1'
-                className='text-gradient text-center text-3xl font-bold uppercase'
+                className='text-gradient text-center text-3xl font-bold tracking-[0.3em]'
                 translateZ='50'
               >
-                About Me
+                projects
               </CardItem>
 
               <CardItem className='mt-4 w-full' translateZ='100'>
@@ -210,67 +220,94 @@ export function Main() {
                   target='__blank'
                   translateZ={20}
                 >
-                  Try now <span className='duration-200 group-hover/card:translate-x-3 group-hover/card:transition-all'>→</span>
+                  Try now{' '}
+                  <span className='duration-200 group-hover/card:translate-x-3 group-hover/card:transition-all'>
+                    →
+                  </span>
                 </CardItem>
               </div>
             </CardBody>
           </CardContainer>
-
         </div>
 
         <div className='grid_5'>
-          <div className='shadow-in bg-dark-600 mb-5 rounded-[22px] p-5'>
+          <div className='border-dark-400/20 border border-solid bg-dark-600 mb-5 rounded-[2vw] p-5'>
             <div className='mb-5 mt-7 flex justify-between px-4'>
               <div>
-                <h1 className='text-lg font-medium text-gray-200'>My adventure lasting 3+ years</h1>
-                <p className='text-gray-600'>21 projects realized🎉</p>
+                <h1 className='text-lg font-medium text-gray-200'>
+                  My adventure lasting 3+ years
+                </h1>
+                <p className='text-gray-600'>
+                  21 projects realized🎉
+                </p>
               </div>
 
-              <span><FaLocationArrow /></span>
+              <span>
+                <FaLocationArrow />
+              </span>
             </div>
 
-            <InfiniteMovingCards className='[mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]' speed='normal'>
-              {
-        TECHNOLOGIES.map(({ label, logo }) => (
-          <div className='' title={label}>
-            <Image alt={`${label} logo`} className='size-[50px] transition-transform duration-300 md:hover:scale-110' height={70} src={`/icons/${logo}`} width={70} />
-          </div>
-        ))
-          }
+            <InfiniteMovingCards
+              className='[mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]'
+              speed='normal'
+            >
+              {TECHNOLOGIES.map(({ label, logo }) => (
+                <div className='' title={label}>
+                  <Image
+                    alt={`${label} logo`}
+                    className='size-[50px] transition-transform duration-300 md:hover:scale-110'
+                    height={70}
+                    src={`/icons/${logo}`}
+                    width={70}
+                  />
+                </div>
+              ))}
             </InfiniteMovingCards>
-
           </div>
 
           <div className='grid grid-cols-[auto_1fr] gap-4'>
             <ul className='grid grid-cols-2 gap-3'>
-              {
-              socialMediaLinks.map(({ brand, icon, id, label, url }, idx) => (
-                <Link key={url} className={cn('shadow-in flex size-[70px] flex-col items-center justify-center gap-3 rounded-[22px] border-solid bg-dark-600 p-2 transition-all duration-200 hover:bg-black/45')} href={url} style={{ backgroundColor: idx === id ? brand : '' }} target='_blank' title={label}>
-                  {icon}
-                </Link>
-              ))
-            }
+              {socialMediaLinks.map(
+                ({ brand, icon, id, label, url }, idx) => (
+                  <Link
+                    key={url}
+                    className={cn(
+                      'border-dark-400/20 border flex size-[70px] flex-col items-center justify-center gap-3 rounded-[2vw] border-solid bg-dark-600 p-2 transition-all duration-200 hover:bg-black/45',
+                      'hover:bg-dark-400 transition-all',
+                    )}
+                    href={url}
+                    style={{
+                      backgroundColor: idx === id ? brand : '',
+                    }}
+                    target='_blank'
+                    title={label}
+                  >
+                    {icon}
+                  </Link>
+                ),
+              )}
             </ul>
 
-            <div className='bg-dark-600 rounded-[22px] p-5'>
-              <h1 className='mb-3 text-lg uppercase tracking-widest text-gray-600'>Resources</h1>
-              <p className='max-w-56 text-xl text-gray-200'>Resources to speed your workflow</p>
+            <div className='bg-dark-600 border-dark-400/20 border border-solid rounded-[22px] p-5'>
+              <h1 className='mb-3 text-lg uppercase tracking-widest text-gray-600'>
+                Resources
+              </h1>
+              <p className='max-w-56 text-xl text-gray-200'>
+                Resources to speed your workflow
+              </p>
             </div>
           </div>
         </div>
 
-        <div
-          className='grid_3'
-        >
+        <div className='grid_3'>
           <CardContainer className='bg-dot-white/[0.2] bg-dot-black/[0.2] relative'>
-
-            <CardBody className='group/card relative size-full rounded-[22px] border border-black/[0.1] p-6 hover:shadow-2xl dark:border-white/[0.2] dark:hover:shadow-emerald-500/[0.1]'>
+            <CardBody className='group/card relative size-full rounded-[2vw] border-black/[0.1] p-6 hover:shadow-2xl border-dark-400/20 border border-solid hover:shadow-emerald-500/[0.1]'>
               <CardItem
                 as='h1'
-                className='text-gradient text-center text-3xl font-bold uppercase'
+                className='text-gradient text-center text-3xl font-bold tracking-[0.3em]'
                 translateZ='50'
               >
-                About Me
+                contact
               </CardItem>
 
               <CardItem className='mt-4 w-full' translateZ='100'>
@@ -290,20 +327,19 @@ export function Main() {
                   target='__blank'
                   translateZ={20}
                 >
-                  Try now <span className='duration-200 group-hover/card:translate-x-3 group-hover/card:transition-all'>→</span>
+                  Try now{' '}
+                  <span className='duration-200 group-hover/card:translate-x-3 group-hover/card:transition-all'>
+                    →
+                  </span>
                 </CardItem>
               </div>
             </CardBody>
           </CardContainer>
-
         </div>
 
-        <div
-          className='grid_4'
-        >
+        <div className='grid_4'>
           <CardContainer className='bg-dot-white/[0.2] bg-dot-black/[0.2] relative'>
-
-            <CardBody className='group/card relative size-full rounded-[22px] border border-black/[0.1] p-6 hover:shadow-2xl dark:border-white/[0.2] dark:hover:shadow-emerald-500/[0.1]'>
+            <CardBody className='group/card relative size-full rounded-[2vw] border-dark-400/20 border border-solid p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
               <CardItem
                 as='h1'
                 className='text-gradient text-center text-3xl font-bold uppercase'
@@ -329,12 +365,98 @@ export function Main() {
                   target='__blank'
                   translateZ={20}
                 >
-                  Try now <span className='duration-200 group-hover/card:translate-x-3 group-hover/card:transition-all'>→</span>
+                  Try now{' '}
+                  <span className='duration-200 group-hover/card:translate-x-3 group-hover/card:transition-all'>
+                    →
+                  </span>
                 </CardItem>
               </div>
             </CardBody>
           </CardContainer>
+        </div>
 
+        <div className='grid_5'>
+          <div className='space-y-5'>
+            <div className='bg-dark-600 border-dark-400/20 flex size-full flex-col items-center justify-center rounded-[2vw] border border-solid p-5 text-center'>
+              <h1 className='mb-2 flex items-center gap-2 text-xl font-medium text-gray-600'>
+                My Blog{' '}
+                <span>
+                  <FaBookOpen />
+                </span>
+              </h1>
+
+              <p className='text-2xl text-gray-200'>Coming soon</p>
+            </div>
+            <div className='bg-dark-600 border-dark-400/20 flex w-full flex-col items-center justify-center rounded-[2vw] border border-solid p-6'>
+              <h1 className='mx-auto mb-2 max-w-[200px] text-center text-2xl font-medium text-gray-200'>
+                Have any project in mind?
+              </h1>
+
+              <button
+                className='flex items-center gap-2 rounded-lg bg-[#171717]/20 px-6 py-3 text-white hover:bg-[#171717]/80 active:bg-[#171717]/80'
+                type='button'
+              >
+                Copy Email{' '}
+                <span>
+                  <FaRegCopy />
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className='mt-7 rounded-[4vw] p-10'
+        style={{
+          background: 'url(/images/bg.jpg), rgb(20, 20, 20)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div className='mx-auto max-w-3xl'>
+          <h3 className='tex-xl text-center font-bold uppercase text-gray-200'>
+            Foundation of my work
+          </h3>
+          <div className='mt-7 grid grid-cols-[1fr_1fr_1fr] gap-3'>
+            <div className='space-y-5'>
+              <div>
+                <h1 className='text-gradient font-semibold'>
+                  Functionality
+                </h1>
+                <p className='text-sm text-gray-200'>
+                  Designs that serve a purpose
+                </p>
+              </div>
+              <div className='mt-4'>
+                <h1 className='text-gradient font-semibold'>
+                  Simplicity
+                </h1>
+                <p className='text-sm text-gray-200'>
+                  Complexity surfaced only when necessary
+                </p>
+              </div>
+            </div>
+
+            <Image
+              alt='bubble'
+              height={300}
+              src='/images/bubble.png'
+              width={300}
+            />
+
+            <div>
+              <div>
+                <h1 className='text-gradient font-semibold'>
+                  Emotion
+                </h1>
+                <p className='text-sm text-gray-200'>
+                  Products with a character & solutions optimized for
+                  emotion
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -7,13 +7,14 @@ import { Testimonial } from '@/user/pages/home/testimonial';
 function HomePage() {
   return (
     <div className='relative'>
-  
-        <Header />
-        {/* <Beams /> */}
-        <HeroParallaxDemo />
+
+      <Header />
+      <HeroParallaxDemo />
+      <div className="bg-grid-white/[0.05] after:bg-grid-white/[0.02] relative after:absolute after:inset-0 after:z-[-2] after:content-['']">
         <Main />
         <Testimonial />
         <Footer />
+      </div>
     </div>
   );
 }

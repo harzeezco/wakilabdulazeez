@@ -1,3 +1,4 @@
+import { cn } from '@/utils/cn';
 import Link from 'next/link';
 
 const NAVLINKS = [
@@ -25,16 +26,16 @@ export function Footer() {
       <h1 className='text-gradient text-8xl font-bold uppercase'>Wakil Abdul Azeez</h1>
 
       <nav>
-        <ul>
+        <ul className='mb-3 mt-7 flex items-center justify-center gap-4'>
           {
-            NAVLINKS.map(({ href, title }) => (
-              <Link key={href} className='border-r border-solid border-slate-200' href={href}>{title}</Link>
-      ))
+            NAVLINKS.map(({ href, title }, idx) => (
+              <Link key={href} className={cn(idx === NAVLINKS.length - 1 ? ' ' : 'border-r-2 pr-4 border-solid border-gray-600', 'hover:bg-[#363636] px-4 active:bg-[#3a3a3a] transition-all text-gradient font-semibold')} href={href}>{title}</Link>
+            ))
           }
         </ul>
       </nav>
 
-      <p>All rights reserved • 2023</p>
+      <p className='text-slate-500'>All rights reserved • 2023</p>
     </footer>
   );
 }

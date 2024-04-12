@@ -30,7 +30,8 @@ const config: Config = {
     extend: {
       colors: {
         dark: {
-          600: 'rgb(20, 20, 20)',
+          400: '#0C55C2',
+          600: '#14142B',
         },
         gray: {
           200: 'rgb(204, 204, 204)',
@@ -51,12 +52,23 @@ const config: Config = {
         scroll:
           'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
         'meteor-effect': 'meteor 5s linear infinite',
+        'waving-hand': 'waving 2.5s linear 3',
       },
       keyframes: {
         scroll: {
           to: {
             transform: 'translate(calc(-50% - 0.5rem))',
           },
+        },
+        waving: {
+          '0%': { transform: 'rotate(0.0deg)' },
+          '10%': { transform: 'rotate(14deg)' },
+          '20%': { transform: 'rotate(-8deg)' },
+          '30%': { transform: 'rotate(14deg)' },
+          '40%': { transform: 'rotate(-4deg)' },
+          '50%': { transform: 'rotate(10.0deg)' },
+          '60%': { transform: 'rotate(0.0deg)' },
+          '100%': { transform: 'rotate(0.0deg)' },
         },
         meteor: {
           '0%': {

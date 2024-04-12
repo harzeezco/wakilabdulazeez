@@ -112,7 +112,7 @@ export function Header() {
   return (
     <div className='mt-16 flex h-dvh flex-col items-center justify-center px-4'>
       <p className='relative z-[9999] mx-auto max-w-[750px] text-center text-3xl font-medium  dark:text-neutral-200'>
-        Hey,✌ I’m Roman - Product designer building
+        Hey,<span className='animate-waving-hand ml-1 inline-block'>👋</span> I’m Roman - Product designer building
         his ideas. This is my little corner on the internet,
         where you can learn about me and my work.
         Have a project in mind you’re excited about? Let’s chat.
@@ -120,7 +120,7 @@ export function Header() {
 
       <div className='relative my-10 mr-5 flex items-center gap-3'>
         <div className='mouse mx-auto' />
-        <p>SCROLL TO BEGIN</p>
+        <p className='text-gradient'>SCROLL TO BEGIN</p>
       </div>
     </div>
   );
@@ -264,7 +264,7 @@ export function HeroParallaxDemo() {
   return (
     <div>
       <HeroParallax products={products} />
-      <div className='relative mx-auto mt-10 h-40 w-[40rem]'>
+      <div className='relative z-50 mx-auto mt-10 h-40 w-[40rem]'>
         {/* Gradients */}
         <div className='absolute inset-x-20 top-0 h-[2px] w-3/4 bg-gradient-to-r from-transparent via-indigo-500 to-transparent blur-sm' />
         <div className='absolute inset-x-20 top-0 h-px w-3/4 bg-gradient-to-r from-transparent via-indigo-500 to-transparent' />
@@ -281,7 +281,7 @@ export function HeroParallaxDemo() {
           particleDensity={1200}
         />
 
-        <div className='absolute inset-0 size-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]' />
+        <div className='absolute inset-0 size-full [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]' />
       </div>
     </div>
   );

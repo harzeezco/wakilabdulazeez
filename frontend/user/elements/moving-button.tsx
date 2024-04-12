@@ -73,7 +73,7 @@ export function HoverBorderGradient({
     >
       <div
         className={cn(
-          'w-auto text-[#191930] z-10 bg-black px-10 text-sm py-2 rounded-[inherit] font-semibold',
+          'w-auto text-[#191930] z-10 bg-black px-12 text-sm py-4 rounded-[inherit] font-semibold',
           className
         )}
         style={{ backgroundImage: 'linear-gradient(#dce6ff, #848faa)' }}
