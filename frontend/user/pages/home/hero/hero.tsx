@@ -10,7 +10,6 @@ import {
 } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { SparklesCore } from '@/user/elements/sparkles-core';
 
 export const products = [
   {
@@ -256,6 +255,16 @@ export function HeroParallax({
           ))}
         </motion.div>
       </motion.div>
+
+      <div className='absolute inset-x-0 bottom-0 -z-10 w-full'>
+        <Image
+          alt='header-blur'
+          className='w-full opacity-45'
+          height={610}
+          src='/images/grid.png'
+          width={1200}
+        />
+      </div>
     </div>
   );
 }
@@ -264,7 +273,7 @@ export function HeroParallaxDemo() {
   return (
     <div>
       <HeroParallax products={products} />
-      <div className='relative z-50 mx-auto mt-10 h-40 w-[40rem]'>
+      <div className='relative z-50'>
         {/* Gradients */}
         <div className='absolute inset-x-20 top-0 h-[2px] w-3/4 bg-gradient-to-r from-transparent via-indigo-500 to-transparent blur-sm' />
         <div className='absolute inset-x-20 top-0 h-px w-3/4 bg-gradient-to-r from-transparent via-indigo-500 to-transparent' />
@@ -272,14 +281,14 @@ export function HeroParallaxDemo() {
         <div className='absolute inset-x-60 top-0 h-px w-1/4 bg-gradient-to-r from-transparent via-sky-500 to-transparent' />
 
         {/* Core component */}
-        <SparklesCore
+        {/* <SparklesCore
           background='transparent'
           className='size-full'
           maxSize={1}
           minSize={0.4}
           particleColor='#FFFFFF'
           particleDensity={1200}
-        />
+        /> */}
 
         <div className='absolute inset-0 size-full [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]' />
       </div>

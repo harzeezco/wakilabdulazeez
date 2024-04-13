@@ -152,7 +152,7 @@ export function Header() {
       <div>
         <motion.div
           animate={isActive ? 'open' : 'closed'}
-          className='border-dark-400/20 fixed left-1/2 top-20 z-50 flex -translate-x-1/2 rounded-2xl border  border-solid bg-[#14142B]'
+          className='border-dark-400/20 fixed left-1/2 top-20 z-50 flex -translate-x-1/2 rounded-3xl border border-solid bg-[#14142B]'
           initial='closed'
           variants={menu}
           onMouseEnter={() => setIsActive(true)}

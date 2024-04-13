@@ -153,11 +153,11 @@ export const TECHNOLOGIES = [
 
 export function Main() {
   return (
-    <section className='mx-auto max-w-5xl'>
+    <section className='mx-auto max-w-5xl pt-20'>
       <div className='relative grid grid-cols-7 gap-7'>
         <div className='grid_1'>
           <CardContainer className='bg-dot-white/[0.2] bg-dot-black/[0.2] relative'>
-            <CardBody className='group/card relative size-full rounded-[2vw] border-dark-400/20 border border-solid p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
+            <CardBody className='group/card border-dark-400/20 relative size-full rounded-[2vw] border border-solid p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
               <CardItem
                 as='h1'
                 className='text-gradient text-center text-3xl font-bold tracking-[0.3em]'
@@ -194,7 +194,7 @@ export function Main() {
         </div>
         <div className='grid_2'>
           <CardContainer className='bg-dot-white/[0.2] bg-dot-black/[0.2] relative'>
-            <CardBody className='group/card relative size-full rounded-[2vw] border-black/[0.1] p-6 hover:shadow-2xl border-dark-400/20 border border-solid hover:shadow-emerald-500/[0.1]'>
+            <CardBody className='group/card border-dark-400/20 relative size-full rounded-[2vw] border border-solid border-black/[0.1] p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
               <CardItem
                 as='h1'
                 className='text-gradient text-center text-3xl font-bold tracking-[0.3em]'
@@ -231,7 +231,7 @@ export function Main() {
         </div>
 
         <div className='grid_5'>
-          <div className='border-dark-400/20 border border-solid bg-dark-600 mb-5 rounded-[2vw] p-5'>
+          <div className='border-dark-400/20 bg-dark-600 mb-5 rounded-[2vw] border border-solid p-5'>
             <div className='mb-5 mt-7 flex justify-between px-4'>
               <div>
                 <h1 className='text-lg font-medium text-gray-200'>
@@ -288,7 +288,7 @@ export function Main() {
               )}
             </ul>
 
-            <div className='bg-dark-600 border-dark-400/20 border border-solid rounded-[22px] p-5'>
+            <div className='bg-dark-600 border-dark-400/20 rounded-[22px] border border-solid p-5'>
               <h1 className='mb-3 text-lg uppercase tracking-widest text-gray-600'>
                 Resources
               </h1>
@@ -301,7 +301,7 @@ export function Main() {
 
         <div className='grid_3'>
           <CardContainer className='bg-dot-white/[0.2] bg-dot-black/[0.2] relative'>
-            <CardBody className='group/card relative size-full rounded-[2vw] border-black/[0.1] p-6 hover:shadow-2xl border-dark-400/20 border border-solid hover:shadow-emerald-500/[0.1]'>
+            <CardBody className='group/card border-dark-400/20 relative size-full rounded-[2vw] border border-solid border-black/[0.1] p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
               <CardItem
                 as='h1'
                 className='text-gradient text-center text-3xl font-bold tracking-[0.3em]'
@@ -339,7 +339,7 @@ export function Main() {
 
         <div className='grid_4'>
           <CardContainer className='bg-dot-white/[0.2] bg-dot-black/[0.2] relative'>
-            <CardBody className='group/card relative size-full rounded-[2vw] border-dark-400/20 border border-solid p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
+            <CardBody className='group/card border-dark-400/20 relative size-full rounded-[2vw] border border-solid p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
               <CardItem
                 as='h1'
                 className='text-gradient text-center text-3xl font-bold uppercase'
