@@ -86,7 +86,11 @@
         "react/jsx-filename-extension": "off",
         "react/jsx-props-no-spreading": "off",
         "react/jsx-curly-brace-presence": "error",
+        "func-names": "off",
+        "unicorn/no-new-array": "off",
+        "@typescript-eslint/no-unused-vars": "off",
         "react/jsx-one-expression-per-line": "off",
+        "@typescript-eslint/no-use-before-define": "off",
         "react/jsx-sort-props": [
           2,
           {

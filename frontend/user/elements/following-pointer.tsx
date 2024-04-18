@@ -46,7 +46,7 @@ export function FollowPointer({
       }}
     >
       <svg
-        className='size-6 -translate-x-[12px] -translate-y-[10px] -rotate-[70deg] stroke-sky-600 text-sky-500'
+        className='size-6 translate-x-[-12px] translate-y-[-10px] rotate-[-70deg] stroke-sky-600 text-sky-500'
         fill='currentColor'
         height='1em'
         stroke='currentColor'

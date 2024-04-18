@@ -33,9 +33,9 @@ export function CardStack({
   const startFlipping = () => {
     interval = setInterval(() => {
       setCards((prevCards: Card[]) => {
-        const newArray = [...prevCards]; // create a copy of the array
+        const newArray = [...prevCards];
 
-        newArray.unshift(newArray.pop()!); // move the last element to the front
+        newArray.unshift(newArray.pop()!);
 
         return newArray;
       });
@@ -43,16 +43,16 @@ export function CardStack({
   };
 
   return (
-    <div className='relative  size-60 md:h-60 md:w-96'>
+    <div className='relative size-72 p-4 md:h-60 md:w-96'>
       {cards.map((card, index) => (
         <motion.div
           key={card.id}
           animate={{
               top: index * -CARD_OFFSET,
-              scale: 1 - index * SCALE_FACTOR, // decrease scale for cards that are behind
-              zIndex: cards.length - index, //  decrease z-index for the cards that are behind
+              scale: 1 - index * SCALE_FACTOR,
+              zIndex: cards.length - index,
             }}
-          className='bg-dark-600 absolute flex size-60 flex-col justify-between rounded-3xl border border-white/[0.1] p-4 shadow-xl shadow-white/[0.05] md:h-60 md:w-96'
+          className='absolute flex size-60 flex-col justify-between rounded-3xl border border-white/[0.1] bg-dark-600 p-4 shadow-xl shadow-white/[0.05] md:h-60 md:w-96'
           style={{
               transformOrigin: 'top center',
             }}

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import localFont from 'next/font/local';
+import TransitionProvider from '@/provider/transition-provider';
+import { Header } from '@/user/layout/header';
 
 const myFont = localFont({
   src: '../public/font/archia-regular-webfont.woff',
@@ -20,7 +22,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${myFont.className} bg-[#14142B] text-[#FAFBFC]`}>
-        {children}
+        <TransitionProvider>
+          <Header />
+          {children}
+        </TransitionProvider>
       </body>
     </html>
   );

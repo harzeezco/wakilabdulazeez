@@ -153,11 +153,11 @@ export const TECHNOLOGIES = [
 
 export function Main() {
   return (
-    <section className='mx-auto max-w-5xl pt-20'>
-      <div className='relative grid grid-cols-7 gap-7'>
-        <div className='grid_1'>
-          <CardContainer className='bg-dot-white/[0.2] bg-dot-black/[0.2] relative'>
-            <CardBody className='group/card border-dark-400/20 relative size-full rounded-[2vw] border border-solid p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
+    <section className='mx-auto max-w-5xl pt-20 max-sm:px-4'>
+      <div className='relative grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-7'>
+        <div className='grid_1 max-sm:order-1'>
+          <CardContainer className='relative bg-dot-black/[0.2] bg-dot-white/[0.2]'>
+            <CardBody className='group/card relative size-full rounded-[2vw] border border-solid border-dark-400/20 p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
               <CardItem
                 as='h1'
                 className='text-gradient text-center text-3xl font-bold tracking-[0.3em]'
@@ -192,9 +192,10 @@ export function Main() {
             </CardBody>
           </CardContainer>
         </div>
-        <div className='grid_2'>
-          <CardContainer className='bg-dot-white/[0.2] bg-dot-black/[0.2] relative'>
-            <CardBody className='group/card border-dark-400/20 relative size-full rounded-[2vw] border border-solid border-black/[0.1] p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
+
+        <div className='grid_2 max-sm:order-2'>
+          <CardContainer className='relative bg-dot-black/[0.2] bg-dot-white/[0.2]'>
+            <CardBody className='group/card relative size-full rounded-[2vw] border border-solid border-dark-400/20 p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
               <CardItem
                 as='h1'
                 className='text-gradient text-center text-3xl font-bold tracking-[0.3em]'
@@ -230,8 +231,8 @@ export function Main() {
           </CardContainer>
         </div>
 
-        <div className='grid_5'>
-          <div className='border-dark-400/20 bg-dark-600 mb-5 rounded-[2vw] border border-solid p-5'>
+        <div className='grid_5 max-sm:order-5'>
+          <div className='mb-5 rounded-[2vw] border border-solid border-dark-400/20 bg-dark-600 p-5'>
             <div className='mb-5 mt-7 flex justify-between px-4'>
               <div>
                 <h1 className='text-lg font-medium text-gray-200'>
@@ -265,7 +266,7 @@ export function Main() {
             </InfiniteMovingCards>
           </div>
 
-          <div className='grid grid-cols-[auto_1fr] gap-4'>
+          <div className='grid grid-cols-[auto_1fr] gap-4 max-sm:order-6'>
             <ul className='grid grid-cols-2 gap-3'>
               {socialMediaLinks.map(
                 ({ brand, icon, id, label, url }, idx) => (
@@ -288,7 +289,7 @@ export function Main() {
               )}
             </ul>
 
-            <div className='bg-dark-600 border-dark-400/20 rounded-[22px] border border-solid p-5'>
+            <div className='rounded-[22px] border border-solid border-dark-400/20 bg-dark-600 p-5 max-sm:order-6'>
               <h1 className='mb-3 text-lg uppercase tracking-widest text-gray-600'>
                 Resources
               </h1>
@@ -299,9 +300,9 @@ export function Main() {
           </div>
         </div>
 
-        <div className='grid_3'>
-          <CardContainer className='bg-dot-white/[0.2] bg-dot-black/[0.2] relative'>
-            <CardBody className='group/card border-dark-400/20 relative size-full rounded-[2vw] border border-solid border-black/[0.1] p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
+        <div className='grid_3 max-sm:order-3'>
+          <CardContainer className='relative bg-dot-black/[0.2] bg-dot-white/[0.2]'>
+            <CardBody className='group/card relative size-full rounded-[2vw] border border-solid border-dark-400/20 p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
               <CardItem
                 as='h1'
                 className='text-gradient text-center text-3xl font-bold tracking-[0.3em]'
@@ -337,9 +338,9 @@ export function Main() {
           </CardContainer>
         </div>
 
-        <div className='grid_4'>
-          <CardContainer className='bg-dot-white/[0.2] bg-dot-black/[0.2] relative'>
-            <CardBody className='group/card border-dark-400/20 relative size-full rounded-[2vw] border border-solid p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
+        <div className='grid_4 max-sm:order-3'>
+          <CardContainer className='relative bg-dot-black/[0.2] bg-dot-white/[0.2]'>
+            <CardBody className='group/card relative size-full rounded-[2vw] border border-solid border-dark-400/20 p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
               <CardItem
                 as='h1'
                 className='text-gradient text-center text-3xl font-bold uppercase'
@@ -375,9 +376,9 @@ export function Main() {
           </CardContainer>
         </div>
 
-        <div className='grid_5'>
+        <div className='grid_5 max-sm:order-7'>
           <div className='space-y-5'>
-            <div className='bg-dark-600 border-dark-400/20 flex size-full flex-col items-center justify-center rounded-[2vw] border border-solid p-5 text-center'>
+            <div className='flex size-full flex-col items-center justify-center rounded-[2vw] border border-solid border-dark-400/20 bg-dark-600 p-5 py-10 text-center'>
               <h1 className='mb-2 flex items-center gap-2 text-xl font-medium text-gray-600'>
                 My Blog{' '}
                 <span>
@@ -387,7 +388,7 @@ export function Main() {
 
               <p className='text-2xl text-gray-200'>Coming soon</p>
             </div>
-            <div className='bg-dark-600 border-dark-400/20 flex w-full flex-col items-center justify-center rounded-[2vw] border border-solid p-6'>
+            <div className='flex w-full flex-col items-center justify-center rounded-[2vw] border border-solid border-dark-400/20 bg-dark-600 p-6 py-8'>
               <h1 className='mx-auto mb-2 max-w-[200px] text-center text-2xl font-medium text-gray-200'>
                 Have any project in mind?
               </h1>
@@ -405,6 +406,7 @@ export function Main() {
           </div>
         </div>
       </div>
+
       <div
         className='mt-7 rounded-[4vw] p-10'
         style={{
@@ -415,7 +417,7 @@ export function Main() {
         }}
       >
         <div className='mx-auto max-w-3xl'>
-          <h3 className='tex-xl text-center font-bold uppercase text-gray-200'>
+          <h3 className='text-center text-xl font-bold uppercase text-gray-200'>
             Foundation of my work
           </h3>
           <div className='mt-7 grid grid-cols-[1fr_1fr_1fr] gap-3'>

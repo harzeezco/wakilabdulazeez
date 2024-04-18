@@ -42,7 +42,7 @@ const testimonials: TestimonialProp = [
 
 export function Testimonial() {
   return (
-    <div className='dark:bg-grid-white/[0.05] relative mt-10 flex flex-col items-center justify-center overflow-hidden rounded-md antialiased'>
+    <div className='relative mt-10 flex flex-col items-center justify-center overflow-hidden rounded-md antialiased dark:bg-grid-white/[0.05]'>
       <InfiniteMovingCards
         direction='right'
         speed='slow'
@@ -50,12 +50,12 @@ export function Testimonial() {
         {testimonials.map((item) => (
           <li
             key={item.name}
-            className='bg-dark-600 relative h-[300px] w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-slate-700 px-8 py-6 md:w-[450px]'
+            className='relative h-[300px] w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-slate-700 bg-dark-600 px-8 py-6 md:w-[450px]'
           >
             <blockquote>
               <div
                 aria-hidden='true'
-                className='user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 size-[calc(100%_+_4px)]'
+                className='pointer-events-none absolute -left-0.5 -top-0.5 size-[calc(100%_+_4px)]'
               />1
               <span className=' relative z-20 text-sm font-normal leading-[1.6]'>
                 {item.quote}

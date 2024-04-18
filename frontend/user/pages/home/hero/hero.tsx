@@ -1,15 +1,15 @@
 'use client';
 
-import React from 'react';
 import {
+  MotionValue,
   motion,
   useScroll,
-  useTransform,
   useSpring,
-  MotionValue,
+  useTransform,
 } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 
 export const products = [
   {
@@ -49,7 +49,6 @@ export const products = [
     thumbnail:
       'https://aceternity.com/images/products/thumbnails/new/pixelperfect.png',
   },
-
   {
     title: 'Algochurn',
     link: 'https://algochurn.com',
@@ -109,18 +108,18 @@ export const products = [
 
 export function Header() {
   return (
-    <div className='mt-16 flex h-dvh flex-col items-center justify-center px-4'>
-      <p className='relative z-[9999] mx-auto max-w-[750px] text-center text-3xl font-medium  dark:text-neutral-200'>
-        Hey,<span className='animate-waving-hand ml-1 inline-block'>👋</span> I’m Roman - Product designer building
-        his ideas. This is my little corner on the internet,
-        where you can learn about me and my work.
-        Have a project in mind you’re excited about? Let’s chat.
+    <div className='mt-10 flex h-dvh flex-col items-center justify-center px-4'>
+      <p className='relative z-[9999] mx-auto max-w-[750px] text-balance text-center text-xl font-medium md:text-3xl dark:text-neutral-200'>
+        Hey,
+        <span className='ml-1 inline-block animate-waving-hand'>
+          👋
+        </span>{' '}
+        I’m Wakil - Product designer building his ideas. This is my
+        little corner on the internet, where you can learn about me
+        and my work. Have a project in mind you’re excited about?
+        Let’s chat.
       </p>
-
-      <div className='relative my-10 mr-5 flex items-center gap-3'>
-        <div className='mouse mx-auto' />
-        <p className='text-gradient'>SCROLL TO BEGIN</p>
-      </div>
+      <div className='mt-12' />
     </div>
   );
 }
@@ -148,12 +147,12 @@ export function ProductCard({
       }}
     >
       <Link
-        className='block group-hover/product:shadow-2xl '
+        className='pointer-events-auto block group-hover/product:shadow-2xl'
         href={product.link}
       >
         <Image
           alt={product.title}
-          className='absolute inset-0 size-full object-cover object-left-top'
+          className='absolute inset-0  size-full object-cover object-left-top'
           height='600'
           src={product.thumbnail}
           width='600'
@@ -189,27 +188,27 @@ export function HeroParallax({
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
-    springConfig
+    springConfig,
   );
   const translateXReverse = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, -1000]),
-    springConfig
+    springConfig,
   );
   const rotateX = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [15, 0]),
-    springConfig
+    springConfig,
   );
   const opacity = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
-    springConfig
+    springConfig,
   );
   const rotateZ = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [20, 0]),
-    springConfig
+    springConfig,
   );
   const translateY = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
-    springConfig
+    springConfig,
   );
 
   return (
@@ -236,7 +235,7 @@ export function HeroParallax({
             />
           ))}
         </motion.div>
-        <motion.div className='mb-20 flex  flex-row space-x-20 '>
+        <motion.div className='mb-20 flex flex-row space-x-20 '>
           {secondRow.map((product) => (
             <ProductCard
               key={product.title}
@@ -269,26 +268,16 @@ export function HeroParallax({
   );
 }
 
-export function HeroParallaxDemo() {
+export function Hero() {
   return (
     <div>
       <HeroParallax products={products} />
       <div className='relative z-50'>
-        {/* Gradients */}
+
         <div className='absolute inset-x-20 top-0 h-[2px] w-3/4 bg-gradient-to-r from-transparent via-indigo-500 to-transparent blur-sm' />
         <div className='absolute inset-x-20 top-0 h-px w-3/4 bg-gradient-to-r from-transparent via-indigo-500 to-transparent' />
         <div className='absolute inset-x-60 top-0 h-[5px] w-1/4 bg-gradient-to-r from-transparent via-sky-500 to-transparent blur-sm' />
         <div className='absolute inset-x-60 top-0 h-px w-1/4 bg-gradient-to-r from-transparent via-sky-500 to-transparent' />
-
-        {/* Core component */}
-        {/* <SparklesCore
-          background='transparent'
-          className='size-full'
-          maxSize={1}
-          minSize={0.4}
-          particleColor='#FFFFFF'
-          particleDensity={1200}
-        /> */}
 
         <div className='absolute inset-0 size-full [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]' />
       </div>

@@ -24,6 +24,14 @@ export function CardContainer({
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isMouseEntered, setIsMouseEntered] = useState(false);
+  const value = React.useMemo(
+    () =>
+      [isMouseEntered, setIsMouseEntered] as [
+        boolean,
+        React.Dispatch<React.SetStateAction<boolean>>,
+      ],
+    [isMouseEntered, setIsMouseEntered],
+  );
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
@@ -37,23 +45,25 @@ export function CardContainer({
   };
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
-    setIsMouseEntered(true);
     if (!containerRef.current) return;
+
+    setIsMouseEntered(true);
   };
 
   const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
 
     setIsMouseEntered(false);
-    containerRef.current.style.transform = 'rotateY(0deg) rotateX(0deg)';
+    containerRef.current.style.transform =
+      'rotateY(0deg) rotateX(0deg)';
   };
 
   return (
-    <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
+    <MouseEnterContext.Provider value={value}>
       <div
         className={cn(
           'flex items-center justify-center',
-          containerClassName
+          containerClassName,
         )}
         style={{
           perspective: '1000px',
@@ -63,7 +73,7 @@ export function CardContainer({
           ref={containerRef}
           className={cn(
             'flex items-center justify-center relative transition-all duration-200 ease-linear',
-            className
+            className,
           )}
           style={{
             transformStyle: 'preserve-3d',

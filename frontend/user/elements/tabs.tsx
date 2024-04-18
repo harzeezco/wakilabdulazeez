@@ -15,7 +15,6 @@ export function FadeInDiv({
   hovering,
   tabs,
 }: {
-  active: Tab;
   className?: string;
   hovering?: boolean;
   tabs: Tab[];
@@ -77,7 +76,7 @@ export function Tabs({
     <>
       <div
         className={cn(
-          'flex flex-row gap-4 items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full',
+          'flex flex-row gap-4 px-4 items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full',
           containerClassName
         )}
       >
@@ -114,7 +113,6 @@ export function Tabs({
       </div>
       <FadeInDiv
         key={active.value}
-        active={active}
         className={cn('mt-12', contentClassName)}
         hovering={hovering}
         tabs={tabs}
