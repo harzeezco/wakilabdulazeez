@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import './globals.css';
 import localFont from 'next/font/local';
-import TransitionProvider from '@/provider/transition-provider';
+import TransitionProvider from '@/user/provider/transition-provider';
 import { Header } from '@/user/layout/header';
+import './styles/globals.css';
 
 const myFont = localFont({
   src: '../public/font/archia-regular-webfont.woff',

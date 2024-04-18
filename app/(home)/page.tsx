@@ -1,4 +1,4 @@
-import PageProvider from '@/provider/page-provider';
+import PageProvider from '@/user/provider/page-provider';
 import { Footer } from '@/user/layout/footer';
 import { Hero } from '@/user/pages/home/hero/hero';
 import { Main } from '@/user/pages/home/main';
@@ -17,6 +17,7 @@ function HomePage() {
         <Testimonial />
         <Footer />
       </div>
+
     </div>
   );
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import PageProvider from '@/provider/page-provider';
+import PageProvider from '@/user/provider/page-provider';
 import { Footer } from '@/user/layout/footer';
 import Image from 'next/image';
 import { ContactForm } from './contact-form';
@@ -9,7 +9,7 @@ function ContactPage() {
   return (
     <PageProvider>
       <div className=''>
-        <div className="bg-grid-white/[0.05] after:bg-grid-white/[0.02] relative pb-10 after:absolute after:inset-0 after:z-[-2] after:content-['']">
+        <div className="relative pb-10 bg-grid-white/[0.05] after:absolute after:inset-0 after:z-[-2] after:content-[''] after:bg-grid-white/[0.02]">
           <header className='pt-32'>
             <h1 className='bg-gradient-to-b from-neutral-200  to-neutral-600 bg-clip-text text-center text-3xl font-bold uppercase tracking-[0.2em] text-transparent md:text-6xl lg:text-9xl'>
               Contact Me
@@ -31,7 +31,7 @@ function ContactPage() {
           </div>
         </div>
 
-        <div className="bg-grid-white/[0.05] after:bg-grid-white/[0.02] relative mt-10 pt-[3vw] after:absolute after:inset-0 after:z-[-2] after:content-['']">
+        <div className="relative mt-10 pt-[3vw] bg-grid-white/[0.05] after:absolute after:inset-0 after:z-[-2] after:content-[''] after:bg-grid-white/[0.02]">
           <Footer />
         </div>
       </div>

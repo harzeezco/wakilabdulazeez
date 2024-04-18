@@ -7,7 +7,7 @@ export function ProjectTab() {
       title: 'Product',
       value: 'product',
       content: (
-        <div className='border-dark-400/20 relative size-full overflow-hidden rounded-2xl border border-solid bg-[#14142B] p-10 text-xl font-bold text-white md:text-4xl'>
+        <div className='relative size-full overflow-hidden rounded-2xl border border-solid border-dark-400/20 bg-[#14142B] p-10 text-xl font-bold text-white md:text-4xl'>
           <p>Product Tab</p>
           <DummyContent />
         </div>
@@ -17,7 +17,7 @@ export function ProjectTab() {
       title: 'Services',
       value: 'services',
       content: (
-        <div className='border-dark-400/20 relative size-full overflow-hidden rounded-2xl border border-solid bg-[#14142B] p-10 text-xl font-bold text-white md:text-4xl'>
+        <div className='relative size-full overflow-hidden rounded-2xl border border-solid border-dark-400/20 bg-[#14142B] p-10 text-xl font-bold text-white md:text-4xl'>
           <p>Services tab</p>
           <DummyContent />
         </div>
@@ -27,7 +27,7 @@ export function ProjectTab() {
       title: 'Playground',
       value: 'playground',
       content: (
-        <div className='border-dark-400/20 relative size-full overflow-hidden rounded-2xl border border-solid bg-[#14142B] p-10 text-xl font-bold text-white md:text-4xl'>
+        <div className='relative size-full overflow-hidden rounded-2xl border border-solid border-dark-400/20 bg-[#14142B] p-10 text-xl font-bold text-white md:text-4xl'>
           <p>Playground tab</p>
           <DummyContent />
         </div>
@@ -37,7 +37,7 @@ export function ProjectTab() {
       title: 'Content',
       value: 'content',
       content: (
-        <div className='border-dark-400/20 relative size-full overflow-hidden rounded-2xl border border-solid bg-[#14142B] p-10 text-xl font-bold text-white md:text-4xl'>
+        <div className='relative size-full overflow-hidden rounded-2xl border border-solid border-dark-400/20 bg-[#14142B] p-10 text-xl font-bold text-white md:text-4xl'>
           <p>Content tab</p>
           <DummyContent />
         </div>
@@ -47,7 +47,7 @@ export function ProjectTab() {
       title: 'Random',
       value: 'random',
       content: (
-        <div className='border-dark-400/20 relative size-full overflow-hidden rounded-2xl border border-solid bg-[#14142B] p-10 text-xl font-bold text-white md:text-4xl'>
+        <div className='relative size-full overflow-hidden rounded-2xl border border-solid border-dark-400/20 bg-[#14142B] p-10 text-xl font-bold text-white md:text-4xl'>
           <p>Random tab</p>
           <DummyContent />
         </div>
