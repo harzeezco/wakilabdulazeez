@@ -94,7 +94,7 @@ export function ContactForm() {
   }
 
   return (
-    <div className='border-dark-400/20 shadow-input mx-auto mt-16 w-full max-w-4xl rounded-3xl border border-solid bg-[#14142B] p-4 md:p-8'>
+    <div className='mx-auto mt-16 w-full max-w-4xl rounded-3xl border border-solid border-dark-400/20 bg-[#14142B] p-4 shadow-input md:p-8'>
       <h2 className='text-center text-sm font-bold text-neutral-200'>
         New message to Wakil
       </h2>
@@ -163,27 +163,27 @@ export function ContactForm() {
                       </div>
                     </SelectTrigger>
                   </FormControl>
-                  <SelectContent className='!border-dark-400/20 relative z-[9999] rounded-2xl border-solid !bg-[#14142B] text-neutral-200'>
+                  <SelectContent className='relative z-[9999] rounded-2xl border-solid !border-dark-400/20 !bg-[#14142B] text-neutral-200'>
                     <SelectItem
-                      className='hover:!bg-dark-400 cursor-pointer !rounded-[10px] !transition-all'
+                      className='cursor-pointer !rounded-[10px] !transition-all hover:!bg-dark-400'
                       value='I have a cool Project idea'
                     >
                       I have a cool Project idea
                     </SelectItem>
                     <SelectItem
-                      className='hover:!bg-dark-400 cursor-pointer !rounded-[10px] !transition-all'
+                      className='cursor-pointer !rounded-[10px] !transition-all hover:!bg-dark-400'
                       value='I want to connect'
                     >
                       I want to connect
                     </SelectItem>
                     <SelectItem
-                      className='hover:!bg-dark-400 cursor-pointer !rounded-[10px] !transition-all'
+                      className='cursor-pointer !rounded-[10px] !transition-all hover:!bg-dark-400'
                       value='I have a random question'
                     >
                       I have a random question
                     </SelectItem>
                     <SelectItem
-                      className='hover:!bg-dark-400 cursor-pointer !rounded-[10px] !transition-all'
+                      className='cursor-pointer !rounded-[10px] !transition-all hover:!bg-dark-400'
                       value='other'
                     >
                       Other
@@ -214,7 +214,7 @@ export function ContactForm() {
           />
 
           <Button
-            className='group/btn !bg-dark-400 relative block h-12 w-full rounded-2xl font-medium !text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]'
+            className='group/btn relative block h-12 w-full rounded-2xl !bg-dark-400 font-medium !text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]'
             type='submit'
           >
             Send Message &rarr;

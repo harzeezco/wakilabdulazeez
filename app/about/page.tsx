@@ -1,4 +1,4 @@
-import PageProvider from '@/provider/page-provider';
+import PageProvider from '@/user/provider/page-provider';
 import { HoverBorderGradient } from '@/user/elements/moving-button';
 import { Footer } from '@/user/layout/footer';
 import Image from 'next/image';
