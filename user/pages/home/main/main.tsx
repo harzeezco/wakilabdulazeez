@@ -3,11 +3,12 @@ import {
   CardContainer,
   CardItem,
 } from '@/user/elements/3d-card';
+import Copied from '@/user/elements/copied';
 import { InfiniteMovingCards } from '@/user/elements/infinite-moving-cards';
 import { cn } from '@/utils/cn';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaBookOpen, FaRegCopy } from 'react-icons/fa';
+import { FaBookOpen } from 'react-icons/fa';
 import {
   FaGithub,
   FaInstagram,
@@ -42,34 +43,34 @@ const ABOUT = [
   },
 ];
 
-const socialMediaLinks = [
+export const socialMediaLinks = [
   {
     id: 1,
     icon: <FaLinkedin size={24} />,
     label: 'LinkedIn',
     url: 'https://www.linkedin.com/',
-    brand: '#0077B5',
+    brand: 'linkedin',
   },
   {
     id: 2,
     icon: <FaInstagram size={24} />,
     label: 'Instagram',
     url: 'https://www.instagram.com/',
-    brand: '#C13584',
+    brand: 'instagram',
   },
   {
     id: 3,
     icon: <FaSquareXTwitter size={24} />,
     label: 'Twitter',
-    url: 'https://twitter.com/',
-    brand: '#1DA1F2',
+    url: 'https://twitter.com/Wkhayzed',
+    brand: 'twitter',
   },
   {
     id: 4,
     icon: <FaGithub size={24} />,
     label: 'GitHub',
-    url: 'https://github.com/',
-    brand: '#181717',
+    url: 'https://github.com/harzeezco/',
+    brand: 'github',
   },
 ];
 
@@ -151,88 +152,66 @@ export const TECHNOLOGIES = [
   },
 ];
 
+const email = 'wakilabdulazeez@gmail.com';
+
 export function Main() {
   return (
     <section className='mx-auto max-w-5xl pt-20 max-sm:px-4'>
-      <div className='relative grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-7'>
+      <div className='relative grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-7'>
         <div className='grid_1 max-sm:order-1'>
-          <CardContainer className='relative bg-dot-black/[0.2] bg-dot-white/[0.2]'>
-            <CardBody className='group/card relative size-full rounded-[2vw] border border-solid border-dark-400/20 p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
-              <CardItem
-                as='h1'
-                className='text-gradient text-center text-3xl font-bold tracking-[0.3em]'
-                translateZ='50'
-              >
-                about me
-              </CardItem>
+          <CardContainer className='relative bg-dot-black/[0.2] '>
+            <CardBody>
+              <div className='space-card scale-110 transition-all duration-300 ease-linear hover:scale-[1.14]'>
+                <CardBody className='group/card space-card-wrapper relative '>
+                  <CardItem
+                    as='div'
+                    className='text-gradient space-card-content-wrapper text-center text-2xl font-bold  tracking-[0.2em] text-white'
+                    translateZ='50'
+                  >
+                    <h3>About me</h3>
 
-              <CardItem className='mt-4 w-full' translateZ='100'>
-                <Image
-                  alt='thumbnail'
-                  className='h-60 w-full rounded-xl object-cover group-hover/card:shadow-xl'
-                  height='1000'
-                  src='/images/about.png'
-                  width='1000'
-                />
-              </CardItem>
-              <div className='mt-5 flex items-center justify-between'>
-                <CardItem
-                  as={Link}
-                  className='rounded-xl px-4 py-2 text-xs font-normal dark:text-white'
-                  href='https://twitter.com/mannupaaji'
-                  target='__blank'
-                  translateZ={20}
-                >
-                  Try now{' '}
-                  <span className='duration-200 group-hover/card:translate-x-3 group-hover/card:transition-all'>
-                    →
-                  </span>
-                </CardItem>
+                    <CardItem className='mt-4 w-full' translateZ='100'>
+                      <div className='div-block-26'>
+                        <div className='div-block-28' />
+                      </div>
+                    </CardItem>
+
+                  </CardItem>
+                </CardBody>
               </div>
             </CardBody>
+
           </CardContainer>
         </div>
 
         <div className='grid_2 max-sm:order-2'>
-          <CardContainer className='relative bg-dot-black/[0.2] bg-dot-white/[0.2]'>
-            <CardBody className='group/card relative size-full rounded-[2vw] border border-solid border-dark-400/20 p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
-              <CardItem
-                as='h1'
-                className='text-gradient text-center text-3xl font-bold tracking-[0.3em]'
-                translateZ='50'
-              >
-                projects
-              </CardItem>
+          <CardContainer className='relative bg-dot-black/[0.2] '>
+            <CardBody>
+              <div className='space-card scale-110 transition-all duration-300 ease-linear hover:scale-[1.14]'>
+                <CardBody className='group/card space-card-wrapper relative '>
+                  <CardItem
+                    as='div'
+                    className='text-gradient space-card-content-wrapper text-center text-2xl font-bold tracking-[0.2em] text-white'
+                    translateZ='50'
+                  >
+                    <h3>My projects</h3>
 
-              <CardItem className='mt-4 w-full' translateZ='100'>
-                <Image
-                  alt='thumbnail'
-                  className='h-60 w-full rounded-xl object-cover group-hover/card:shadow-xl'
-                  height='1000'
-                  src='/images/about.png'
-                  width='1000'
-                />
-              </CardItem>
-              <div className='mt-5 flex items-center justify-between'>
-                <CardItem
-                  as={Link}
-                  className='rounded-xl px-4 py-2 text-xs font-normal dark:text-white'
-                  href='https://twitter.com/mannupaaji'
-                  target='__blank'
-                  translateZ={20}
-                >
-                  Try now{' '}
-                  <span className='duration-200 group-hover/card:translate-x-3 group-hover/card:transition-all'>
-                    →
-                  </span>
-                </CardItem>
+                    <CardItem className='mt-4 w-full' translateZ='100'>
+                      <div className='div-block-26'>
+                        <div className='div-block-28' />
+                      </div>
+                    </CardItem>
+
+                  </CardItem>
+                </CardBody>
               </div>
             </CardBody>
+
           </CardContainer>
         </div>
 
         <div className='grid_5 max-sm:order-5'>
-          <div className='mb-5 rounded-[2vw] border border-solid border-dark-400/20 bg-dark-600 p-5'>
+          <div className='mb-5 rounded-[2vw] border border-solid border-dark-400/20 bg-dark-600'>
             <div className='mb-5 mt-7 flex justify-between px-4'>
               <div>
                 <h1 className='text-lg font-medium text-gray-200'>
@@ -273,8 +252,8 @@ export function Main() {
                   <Link
                     key={url}
                     className={cn(
-                      'border-dark-400/20 border flex size-[70px] flex-col items-center justify-center gap-3 rounded-[2vw] border-solid bg-dark-600 p-2 transition-all duration-200 hover:bg-black/45',
-                      'hover:bg-dark-400 transition-all',
+                      'border-dark-400/20 border flex size-[70px] flex-col items-center justify-center gap-3 rounded-[2vw] border-solid bg-dark-600 p-2 transition-all duration-200',
+                      brand
                     )}
                     href={url}
                     style={{
@@ -301,78 +280,54 @@ export function Main() {
         </div>
 
         <div className='grid_3 max-sm:order-3'>
-          <CardContainer className='relative bg-dot-black/[0.2] bg-dot-white/[0.2]'>
-            <CardBody className='group/card relative size-full rounded-[2vw] border border-solid border-dark-400/20 p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
-              <CardItem
-                as='h1'
-                className='text-gradient text-center text-3xl font-bold tracking-[0.3em]'
-                translateZ='50'
-              >
-                contact
-              </CardItem>
+          <CardContainer className='relative bg-dot-black/[0.2] '>
+            <CardBody>
+              <div className='space-card scale-110 transition-all duration-300 ease-linear hover:scale-[1.14]'>
+                <CardBody className='group/card space-card-wrapper relative '>
+                  <CardItem
+                    as='div'
+                    className='text-gradient space-card-content-wrapper text-center text-2xl font-bold  tracking-[0.2em] text-white'
+                    translateZ='50'
+                  >
+                    <h3>Contact me</h3>
 
-              <CardItem className='mt-4 w-full' translateZ='100'>
-                <Image
-                  alt='thumbnail'
-                  className='h-60 w-full rounded-xl object-cover group-hover/card:shadow-xl'
-                  height='1000'
-                  src='/images/about.png'
-                  width='1000'
-                />
-              </CardItem>
-              <div className='mt-5 flex items-center justify-between'>
-                <CardItem
-                  as={Link}
-                  className='rounded-xl px-4 py-2 text-xs font-normal dark:text-white'
-                  href='https://twitter.com/mannupaaji'
-                  target='__blank'
-                  translateZ={20}
-                >
-                  Try now{' '}
-                  <span className='duration-200 group-hover/card:translate-x-3 group-hover/card:transition-all'>
-                    →
-                  </span>
-                </CardItem>
+                    <CardItem className='mt-4 w-full' translateZ='100'>
+                      <div className='div-block-26'>
+                        <div className='div-block-28' />
+                      </div>
+                    </CardItem>
+
+                  </CardItem>
+                </CardBody>
               </div>
             </CardBody>
+
           </CardContainer>
         </div>
 
         <div className='grid_4 max-sm:order-3'>
-          <CardContainer className='relative bg-dot-black/[0.2] bg-dot-white/[0.2]'>
-            <CardBody className='group/card relative size-full rounded-[2vw] border border-solid border-dark-400/20 p-6 hover:shadow-2xl hover:shadow-emerald-500/[0.1]'>
-              <CardItem
-                as='h1'
-                className='text-gradient text-center text-3xl font-bold uppercase'
-                translateZ='50'
-              >
-                About Me
-              </CardItem>
+          <CardContainer className='relative bg-dot-black/[0.2] '>
+            <CardBody>
+              <div className='space-card scale-110 transition-all duration-300 ease-linear hover:scale-[1.14]'>
+                <CardBody className='group/card space-card-wrapper relative '>
+                  <CardItem
+                    as='div'
+                    className='text-gradient space-card-content-wrapper text-center text-2xl font-bold capitalize tracking-[0.2em] text-white'
+                    translateZ='50'
+                  >
+                    <h3>about me</h3>
 
-              <CardItem className='mt-4 w-full' translateZ='100'>
-                <Image
-                  alt='thumbnail'
-                  className='h-60 w-full rounded-xl object-cover group-hover/card:shadow-xl'
-                  height='1000'
-                  src='/images/about.png'
-                  width='1000'
-                />
-              </CardItem>
-              <div className='mt-5 flex items-center justify-between'>
-                <CardItem
-                  as={Link}
-                  className='rounded-xl px-4 py-2 text-xs font-normal dark:text-white'
-                  href='https://twitter.com/mannupaaji'
-                  target='__blank'
-                  translateZ={20}
-                >
-                  Try now{' '}
-                  <span className='duration-200 group-hover/card:translate-x-3 group-hover/card:transition-all'>
-                    →
-                  </span>
-                </CardItem>
+                    <CardItem className='mt-4 w-full' translateZ='100'>
+                      <div className='div-block-26'>
+                        <div className='div-block-28' />
+                      </div>
+                    </CardItem>
+
+                  </CardItem>
+                </CardBody>
               </div>
             </CardBody>
+
           </CardContainer>
         </div>
 
@@ -393,15 +348,7 @@ export function Main() {
                 Have any project in mind?
               </h1>
 
-              <button
-                className='flex items-center gap-2 rounded-lg bg-[#171717]/20 px-6 py-3 text-white hover:bg-[#171717]/80 active:bg-[#171717]/80'
-                type='button'
-              >
-                Copy Email{' '}
-                <span>
-                  <FaRegCopy />
-                </span>
-              </button>
+              <Copied className='flex items-center gap-2 rounded-lg bg-dark-400/40 px-6 py-3 !text-white hover:bg-dark-400 active:bg-dark-400' email={email} />
             </div>
           </div>
         </div>

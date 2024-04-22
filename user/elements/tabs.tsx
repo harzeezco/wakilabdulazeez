@@ -22,7 +22,7 @@ export function FadeInDiv({
   const isActive = (tab: Tab) => tab.value === tabs[0].value;
 
   return (
-    <div className='relative size-full'>
+    <div className='relative size-full py-10'>
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}

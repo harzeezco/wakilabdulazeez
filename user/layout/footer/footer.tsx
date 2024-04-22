@@ -4,19 +4,19 @@ import Link from 'next/link';
 const NAVLINKS = [
       {
         title: 'Home',
-        href: '/devops',
+        href: '/',
       },
       {
         title: 'About',
-        href: '/cloud-computing',
+        href: '/about',
   },
  {
         title: 'Projects',
-        href: '/devops',
+        href: '/projects',
       },
       {
         title: 'Contact',
-        href: '/cloud-computing',
+        href: '/contact',
       },
 ];
 

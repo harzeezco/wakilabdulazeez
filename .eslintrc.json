@@ -34,6 +34,7 @@
         "linebreak-style": 0,
         "no-continue": "off",
         "consistent-return": "off",
+        "react/button-has-type": "off",
         "prefer-arrow-callback": 2,
         "no-confusing-arrow": "off",
         "no-underscore-dangle": "off",

@@ -1,24 +1,36 @@
 'use client';
 
 import * as React from 'react';
+import { Button } from '@/user/elements/button';
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerFooter,
+  DrawerTrigger,
+} from '@/user/elements/drawer';
 import { HoverBorderGradient } from '@/user/elements/moving-button';
 import useLenisScroll from '@/user/hooks/use-lenis-scroll';
+import { socialMediaLinks } from '@/user/pages/home/main';
 import { cn } from '@/utils/cn';
 import { AnimatePresence, motion } from 'framer-motion';
+import { AlignRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { FaHamburger } from 'react-icons/fa';
-import { FaPhoneVolume, FaRegFolderOpen } from 'react-icons/fa6';
+import {
+  FaGithub,
+  FaPhoneVolume,
+  FaRegFolderOpen,
+  FaSquareXTwitter,
+} from 'react-icons/fa6';
 import { IoHome } from 'react-icons/io5';
 import { RxAvatar } from 'react-icons/rx';
-import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from '@/user/elements/drawer';
-import { Button } from '@/user/elements/button';
-import { AlignRight, Minus, Plus } from 'lucide-react';
-import { usePathname } from 'next/navigation';
 
 const menu = {
   open: {
-    width: '350px',
+    width: '510px',
     height: '350px',
     top: '40px',
     opacity: 1,
@@ -93,35 +105,59 @@ export const perspective = {
 };
 
 export type CardType = {
+  externalLink: boolean;
   href: string;
   icon: React.ReactNode;
   title: string;
 };
 
-const Courses: CardType[] = [
+const NavLinks = [
   {
     icon: <IoHome color='#191930' size={25} />,
     title: 'Home',
     href: '/',
+    externalLink: false,
+    isMobile: false,
   },
   {
     icon: <RxAvatar color='#191930' size={25} />,
     title: 'About',
     href: '/about',
+    externalLink: false,
+    isMobile: false,
   },
   {
     icon: <FaRegFolderOpen color='#191930' size={25} />,
     title: 'Projects',
     href: '/projects',
+    externalLink: false,
+    isMobile: false,
   },
   {
     icon: <FaPhoneVolume color='#191930' size={25} />,
     title: 'Contact',
     href: '/contact',
+    externalLink: false,
+    isMobile: false,
+  },
+  {
+    icon: <FaGithub color='#191930' size={25} />,
+    href: 'https://github.com/harzeezco/',
+    title: 'Github',
+    externalLink: true,
+    isMobile: true,
+  },
+  {
+    icon: <FaSquareXTwitter color='#191930' size={25} />,
+    href: 'https://twitter.com/Wkhayzed',
+    title: 'Twitter',
+    externalLink: true,
+    isMobile: true,
   },
 ];
 
 function Card({
+  externalLink = false,
   href,
   icon,
   idx,
@@ -136,8 +172,10 @@ function Card({
       variants={perspective}
     >
       <Link
-        className='flex h-[120px] w-[150px] flex-col items-center justify-center gap-3 rounded-2xl border border-solid border-dark-400/20 bg-dark-600 p-4 transition-all duration-200 hover:bg-[#14142B]/20'
+        className='flex h-[120px] w-[150px] flex-col items-center justify-center gap-3 rounded-2xl border border-solid border-dark-400/20 bg-dark-600 p-4 transition-all duration-200 hover:-translate-y-px hover:border-b-8 hover:bg-[#14142B]/20 active:translate-y-[2px] active:border-b-2 active:brightness-90'
         href={href}
+        rel='noopener noreferrer'
+        target={externalLink ? '_blank' : '_self'}
       >
         <div
           className='size-10 rounded-full p-2'
@@ -157,10 +195,11 @@ function Card({
 
 export function Nav() {
   return (
-    <div className='mx-auto mt-16 grid grid-cols-2 gap-4 p-4'>
-      {Courses.map(({ href, icon, title }, idx) => (
+    <div className='mx-auto mt-16 grid grid-cols-3 gap-4 p-4'>
+      {NavLinks.map(({ externalLink, href, icon, title }, idx) => (
         <Card
           key={href}
+          externalLink={externalLink}
           href={href}
           icon={icon}
           idx={idx}
@@ -176,55 +215,64 @@ export function DrawerBar({
 }: {
   children: React.ReactNode;
 }) {
-  const [goal, setGoal] = React.useState(350);
-
-  function onClick(adjustment: number) {
-    setGoal(Math.max(200, Math.min(400, goal + adjustment)));
-  }
+  const pathname = usePathname();
 
   return (
     <Drawer>
-      <DrawerTrigger asChild className='cursor-pointer'>{children}</DrawerTrigger>
+      <DrawerTrigger asChild className='cursor-pointer'>
+        {children}
+      </DrawerTrigger>
       <DrawerContent>
-        <div className='mx-auto w-full max-w-sm'>
-          <DrawerHeader>
-            <DrawerTitle>Move Goal</DrawerTitle>
-            <DrawerDescription>
-              Set your daily activity goal.
-            </DrawerDescription>
-          </DrawerHeader>
-          <div className='p-4 pb-0'>
-            <div className='flex items-center justify-center space-x-2'>
-              <Button
-                className='size-8 shrink-0 rounded-full'
-                disabled={goal <= 200}
-                onClick={() => onClick(-10)}
-              >
-                <Minus className='size-4' />
-                <span className='sr-only'>Decrease</span>
-              </Button>
-              <div className='flex-1 text-center'>
-                <div className='text-7xl font-bold tracking-tighter'>
-                  {goal}
+        <div className='px-6'>
+          <div className='flex flex-col gap-4'>
+            {NavLinks.map(({ href, isMobile, title }, idx) => {
+              const isActive = href === pathname;
+
+              return (
+                <div>
+                  {!isMobile && (
+                    <Link key={href} href={href}>
+                      <div
+                        className={cn(
+                          isActive
+                            ? 'bg-dark-400 font-semibold'
+                            : 'bg-transparent font-medium',
+                          'text-lg transition-all p-4 py-3 duration-200 hover:bg-dark-400 active:bg-dark-400 w-full rounded-2xl',
+                        )}
+                      >
+                        {title}
+                      </div>
+                    </Link>
+                  )}
                 </div>
-                <div className='text-[0.70rem] uppercase'>
-                  Calories/day
-                </div>
-              </div>
-              <Button
-                className='size-8 shrink-0 rounded-full'
-                disabled={goal >= 400}
-                onClick={() => onClick(10)}
-              >
-                <Plus className='size-4' />
-                <span className='sr-only'>Increase</span>
-              </Button>
-            </div>
+              );
+            })}
           </div>
+
+          <ul className='mb-6 mt-5 flex gap-3'>
+            {socialMediaLinks.map(
+              ({ brand, icon, id, label, url }, idx) => (
+                <Link
+                  key={url}
+                  className={cn(
+                    'border-dark-400/20 border flex size-[70px] flex-col items-center justify-center gap-3 rounded-[2vw] border-solid bg-dark-600 p-2 transition-all duration-200',
+                    brand,
+                  )}
+                  href={url}
+                  style={{
+                    backgroundColor: idx === id ? brand : '',
+                  }}
+                  target='_blank'
+                  title={label}
+                >
+                  {icon}
+                </Link>
+              ),
+            )}
+          </ul>
           <DrawerFooter>
-            <Button>Submit</Button>
             <DrawerClose asChild>
-              <Button>Cancel</Button>
+              <Button>Close</Button>
             </DrawerClose>
           </DrawerFooter>
         </div>
@@ -305,26 +353,35 @@ export function Header() {
       </div>
 
       {pathname === '/' && (
-      <div className={cn(isFixed ? 'fixed bottom-[120px] lg:bottom-[105px] left-1/2 z-[999999] -translate-x-1/2' : '')}>
-        <div className='flex items-center gap-3'>
-          <div className='mouse mx-auto' />
-          <p className='text-gradient'>SCROLL TO BEGIN</p>
-        </div>
-      </div>
-)}
-
-      <Link
-        className='fixed bottom-5 left-1/2 z-[999999] -translate-x-1/2 '
-        href='/contact'
-      >
-        <HoverBorderGradient
-          as='button'
-          className='flex items-center space-x-2 uppercase'
-          containerClassName='rounded-full'
+        <div
+          className={cn(
+            isFixed
+              ? 'fixed bottom-[120px] lg:bottom-[105px] left-1/2 z-[999999] -translate-x-1/2'
+              : '',
+          )}
         >
-          Say Hello
-        </HoverBorderGradient>
-      </Link>
+          <div className='flex items-center gap-3'>
+            <div className='mouse mx-auto' />
+            <p className='text-gradient'>SCROLL TO BEGIN</p>
+          </div>
+        </div>
+      )}
+
+      {pathname !== '/contact' && (
+        <Link
+          className='fixed bottom-5 left-1/2 z-[999999] -translate-x-1/2 '
+          href='/contact'
+        >
+          <HoverBorderGradient
+            as='button'
+            className='flex items-center space-x-2 uppercase'
+            containerClassName='rounded-full'
+          >
+            Say Hello
+          </HoverBorderGradient>
+        </Link>
+      )}
+
       <div className='fixed inset-x-0 top-5 z-[99999] flex w-full items-center justify-between px-4 lg:hidden'>
         <div className='flex cursor-pointer items-center gap-2 '>
           <Image
@@ -333,9 +390,7 @@ export function Header() {
             src='/images/Me.png'
             width={60}
           />
-          <h1 className='text-lg font-semibold uppercase'>
-            Wakil
-          </h1>
+          <h1 className='text-lg font-semibold uppercase'>Wakil</h1>
         </div>
 
         <div className='relative z-50 pr-3 lg:hidden'>
