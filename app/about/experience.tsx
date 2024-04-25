@@ -16,8 +16,8 @@ function Experience() {
       <h1 className='text-left text-2xl font-semibold text-[#9ca7c2]'>
         Experience:
       </h1>
-      <div className='mx-auto mt-4 flex items-center justify-between gap-x-20'>
-        <ul className='list'>
+      <div className='mx-auto flex items-center justify-between gap-x-20 sm:mt-4 '>
+        <ul className='list max-sm:hidden'>
           {data.map((item, idx) => (
             <li
               key={item}
@@ -31,10 +31,18 @@ function Experience() {
           ))}
         </ul>
 
-        <div className='h-[400px] flex-1'>
+        <div className='flex-1 max-sm:hidden sm:h-[400px]'>
           <AnimatePresence>
             <ExperienceDetails {...EXPERIENCES[currentActive]} />
           </AnimatePresence>
+        </div>
+
+        <div className='sm:hidden'>
+          {
+            EXPERIENCES.map((experience, idx) => (
+              <ExperienceDetails key={idx} {...experience} />
+            ))
+          }
         </div>
       </div>
     </div>
@@ -115,16 +123,16 @@ export const EXPERIENCES: ExperienceProp[] = [
     startDate: new Date(2021, 10),
     currentlyWorkHere: true,
     summary: [
-      'Worked for various clients like Fiskil, Shosho, Crowe MacKay LLP.',
+      'Worked for various clients like pixelpro, Shosho, Crowe MacKay LLP.',
       'Worked with a variety of technologies, including React, Next.js, Typescript, Express.js, PostgreSQL, Tailwindcss, Mui, Firebase, Storybook, Cypress, and others.',
     ],
   },
   {
-    logo: 'logo-greenapex-light.svg',
+    logo: 'logo.svg',
     logoAlt: 'Greenapex logo',
     position: 'Team Lead',
-    startDate: new Date(2017, 6),
-    endDate: new Date(2021, 9),
+    startDate: new Date(2022, 6),
+    endDate: new Date(2023, 9),
     summary: [
       'Acted as team lead in different projects.',
       'Brainstormed new ideas & gathered requirements for internal projects.',
@@ -133,15 +141,17 @@ export const EXPERIENCES: ExperienceProp[] = [
     ],
   },
   {
-    logo: 'logo-dotnpixel-light.svg',
-    logoAlt: 'Dotnpixel logo',
+    logo: 'tsr-logo-white.svg',
+    logoAlt: 'Tsr logo',
     position: 'Full Stack Developer',
-    startDate: new Date(2015, 11),
-    endDate: new Date(2017, 4),
+    startDate: new Date(2023, 11),
+    endDate: new Date(2024, 4),
     summary: [
-      'Worked as a full stack developer (React / Laravel).',
+      'Worked as a full stack developer (React / Next.js / Node.js / Typescript, Express.js, PostgreSQL, Tailwindcss).',
       'Implement Design patterns',
-      'Get multiple advice from peers',
+      'Scale the platform to 10,000+ users',
+      'Collaborate with UI/UX designers',
+      'Get multiple feedback from peers',
     ],
   },
 ];

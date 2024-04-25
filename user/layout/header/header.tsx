@@ -229,7 +229,7 @@ export function DrawerBar({
               const isActive = href === pathname;
 
               return (
-                <div>
+                <div key={idx}>
                   {!isMobile && (
                     <Link key={href} href={href}>
                       <div
@@ -249,7 +249,7 @@ export function DrawerBar({
             })}
           </div>
 
-          <ul className='mb-6 mt-5 flex gap-3'>
+          <ul className='mb-11 mt-3 flex gap-3'>
             {socialMediaLinks.map(
               ({ brand, icon, id, label, url }, idx) => (
                 <Link

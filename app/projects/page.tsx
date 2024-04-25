@@ -2,7 +2,6 @@ import PageProvider from '@/user/provider/page-provider';
 import { Footer } from '@/user/layout/footer';
 import Image from 'next/image';
 
-import { CardStackDemo } from './testimonial';
 import { ProjectTab } from './project-tab';
 
 function ProjectsPage() {
@@ -32,10 +31,6 @@ function ProjectsPage() {
         </div>
 
         <div className="relative pt-5 bg-grid-white/[0.05] after:absolute after:inset-0 after:z-[-2] after:content-[''] after:bg-grid-white/[0.02]">
-          <div className='mx-auto flex max-w-5xl items-center justify-center gap-x-10 gap-y-4 pb-10 max-sm:flex-col'>
-            <CardStackDemo />
-            <CardStackDemo />
-          </div>
           <Footer />
         </div>
       </div>

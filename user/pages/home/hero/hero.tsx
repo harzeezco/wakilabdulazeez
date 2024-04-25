@@ -181,7 +181,7 @@ export function HeroParallax({
     >
       <Header />
       <motion.div
-        className=''
+        className='max-lg:hidden'
         style={{
           rotateX,
           rotateZ,

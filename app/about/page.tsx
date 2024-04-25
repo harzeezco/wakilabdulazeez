@@ -108,7 +108,7 @@ function AboutPage() {
                 {SKILLS.map((skill, idx) => (
                   <button
                     key={idx}
-                    className='cursor-text rounded-[22px] bg-dark-400/30 px-6 py-2 max-sm:text-sm'
+                    className='cursor-text rounded-[22px] bg-dark-400/10 px-6 py-2 max-sm:px-3 max-sm:text-sm'
                     type='button'
                   >
                     {skill}
