@@ -62,7 +62,7 @@ export function CardContainer({
     <MouseEnterContext.Provider value={value}>
       <div
         className={cn(
-          'flex items-center justify-center',
+          // 'flex items-center justify-center',
           containerClassName,
         )}
         style={{
@@ -72,7 +72,7 @@ export function CardContainer({
         <div
           ref={containerRef}
           className={cn(
-            'flex items-center justify-center relative transition-all duration-200 ease-linear',
+            // 'flex items-center justify-center relative transition-all duration-200 ease-linear',
             className,
           )}
           style={{
@@ -99,7 +99,7 @@ export function CardBody({
   return (
     <div
       className={cn(
-        'h-60 w-60 bg-dark-600 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]',
+        '[transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]',
         className
       )}
     >
@@ -147,7 +147,7 @@ export function CardItem({
   return (
     <Tag
       ref={ref}
-      className={cn('w-fit transition duration-200 ease-linear', className)}
+      className={cn('transition duration-200 ease-linear', className)}
       {...rest}
     >
       {children}

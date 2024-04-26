@@ -13,111 +13,74 @@ import React from 'react';
 
 export const products = [
   {
-    title: 'Moonbeam',
+    title: 'Pulse',
     link: 'https://gomoonbeam.com',
     thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/moonbeam.png',
+      'pulse.webp',
   },
   {
-    title: 'Cursor',
+    title: 'Pixelpro',
     link: 'https://cursor.so',
     thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/cursor.png',
+      'pixelpro.webp',
   },
-  {
-    title: 'Rogue',
-    link: 'https://userogue.com',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/rogue.png',
-  },
-
-  {
-    title: 'Editorially',
+    {
+    title: 'Foodie Foods',
     link: 'https://editorially.org',
     thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/editorially.png',
+      'foodie.webp',
   },
   {
-    title: 'Editrix AI',
-    link: 'https://editrix.ai',
+    title: 'Tsr Academics',
+    link: 'https://userogue.com',
     thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/editrix.png',
+      'tsr.webp',
   },
   {
-    title: 'Pixel Perfect',
+    title: 'Portfolio',
     link: 'https://app.pixelperfect.quest',
     thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/pixelperfect.png',
+      'portfolio.webp',
   },
   {
-    title: 'Algochurn',
-    link: 'https://algochurn.com',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/algochurn.png',
-  },
-  {
-    title: 'Aceternity UI',
+    title: 'Gericht',
     link: 'https://ui.aceternity.com',
     thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/aceternityui.png',
+      'gritcht.webp',
   },
   {
-    title: 'Tailwind Master Kit',
-    link: 'https://tailwindmasterkit.com',
+    title: 'Sparkr Agency',
+    link: 'https://editrix.ai',
     thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png',
+      'sparkr.webp',
   },
   {
-    title: 'SmartBridge',
-    link: 'https://smartbridgetech.com',
+    title: 'Redact',
+    link: 'https://algochurn.com',
     thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/smartbridge.png',
-  },
-  {
-    title: 'Renderwork Studio',
-    link: 'https://renderwork.studio',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/renderwork.png',
+      'redact.webp',
   },
 
   {
-    title: 'Creme Digital',
-    link: 'https://cremedigital.com',
+    title: 'Softsas',
+    link: 'https://tailwindmasterkit.com',
     thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/cremedigital.png',
-  },
-  {
-    title: 'Golden Bells Academy',
-    link: 'https://goldenbellsacademy.com',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png',
-  },
-  {
-    title: 'Invoker Labs',
-    link: 'https://invoker.lol',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/invoker.png',
-  },
-  {
-    title: 'E Free Invoice',
-    link: 'https://efreeinvoice.com',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png',
-  },
+      'sofsas.webp',
+  }
 ];
 
 export function Header() {
   return (
     <div className='mt-10 flex h-dvh flex-col items-center justify-center px-4'>
-      <p className='relative z-[9999] mx-auto max-w-[750px] text-balance text-center text-xl font-medium md:text-3xl dark:text-neutral-200'>
+      <p className='relative z-[9999] mx-auto max-w-[800px] text-balance text-center text-xl font-medium md:text-3xl dark:text-neutral-200'>
         Hey,
         <span className='ml-1 inline-block animate-waving-hand'>
           👋
         </span>{' '}
-        I’m Wakil - Product designer building his ideas. This is my
-        little corner on the internet, where you can learn about me
-        and my work. Have a project in mind you’re excited about?
-        Let’s chat.
+        I’m Wakil -   A Web Developer (React.js & Next.js & Node.js) with a focus on
+        creating (and occasionally designing) exceptional digital
+        experiences that are fast, accessible, visually appealing, and
+        responsive.
       </p>
       <div className='mt-12' />
     </div>
@@ -152,9 +115,9 @@ export function ProductCard({
       >
         <Image
           alt={product.title}
-          className='absolute inset-0  size-full object-cover object-left-top'
+          className='absolute inset-0 size-full object-left-top'
           height='600'
-          src={product.thumbnail}
+          src={`/images/projects/${product.thumbnail}`}
           width='600'
         />
       </Link>
@@ -176,7 +139,7 @@ export function HeroParallax({
   }[];
 }) {
   const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
+  const secondRow = products.slice(5, 9);
   const thirdRow = products.slice(10, 15);
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
@@ -218,7 +181,7 @@ export function HeroParallax({
     >
       <Header />
       <motion.div
-        className=''
+        className='max-lg:hidden'
         style={{
           rotateX,
           rotateZ,
@@ -245,7 +208,7 @@ export function HeroParallax({
           ))}
         </motion.div>
         <motion.div className='flex flex-row-reverse space-x-20 space-x-reverse'>
-          {thirdRow.map((product) => (
+          {secondRow.map((product) => (
             <ProductCard
               key={product.title}
               product={product}

@@ -21,6 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <script async src='//code.tidio.co/gatqhvkhco914zi4vhzoabz2ikkgv5cc.js' />
       <body className={`${myFont.className} bg-[#14142B] text-[#FAFBFC]`}>
         <TransitionProvider>
           <Header />

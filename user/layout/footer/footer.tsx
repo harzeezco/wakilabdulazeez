@@ -4,19 +4,19 @@ import Link from 'next/link';
 const NAVLINKS = [
       {
         title: 'Home',
-        href: '/devops',
+        href: '/',
       },
       {
         title: 'About',
-        href: '/cloud-computing',
+        href: '/about',
   },
  {
         title: 'Projects',
-        href: '/devops',
+        href: '/projects',
       },
       {
         title: 'Contact',
-        href: '/cloud-computing',
+        href: '/contact',
       },
 ];
 
@@ -29,7 +29,9 @@ export function Footer() {
         <ul className='mb-3 mt-7 flex items-center justify-center md:gap-4'>
           {
             NAVLINKS.map(({ href, title }, idx) => (
-              <Link key={href} className={cn(idx === NAVLINKS.length - 1 ? ' ' : 'border-r-2 pr-4 border-solid border-gray-600', 'hover:bg-[#363636] px-4 active:bg-[#3a3a3a] transition-all text-gradient font-semibold')} href={href}>{title}</Link>
+              <li className='transition-all duration-200 ease-in   hover:text-neutral-100 hover:underline hover:decoration-2  hover:underline-offset-4'>
+                <Link key={href} className={cn(idx === NAVLINKS.length - 1 ? ' ' : 'border-r-2 pr-7  border-solid text-neutral-200 border-gray-600', 'px-4 text-gradient font-semibold')} href={href}>{title}</Link>
+              </li>
             ))
           }
         </ul>

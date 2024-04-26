@@ -3,41 +3,37 @@
 import { InfiniteMovingCards } from '@/user/elements/infinite-moving-cards';
 
 type TestimonialProp = {
+    job: string;
     name: string;
-    quote: string;
-    title: string;
+    testimony: string;
   }[];
 
 const testimonials: TestimonialProp = [
   {
-    quote:
-      'It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.',
-    name: 'Charles Dickens',
-    title: 'A Tale of Two Cities',
+    name: 'Ismail Quadri',
+    job: 'Sparkr Agency CEO',
+    testimony: 'Hiring Wakil was a game-changer for our project. His exceptional communication skills kept us updated at every step, ensuring alignment between our vision and the final product. He delivered top-notch quality website within tight deadlines, demonstrating professionalism and dedication throughout. I highly recommend Wakil for any web development project.'
   },
   {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: 'William Shakespeare',
-    title: 'Hamlet',
+    name: 'David Martinez',
+    job: 'Product Designer',
+    testimony: 'Working with Wakil was a breeze from start to finish. His clear communication and proactive approach made collaboration effortless. His attention to detail and creative problem-solving skills were instrumental in enhancing our platform\'s user experience. He consistently went above and beyond to deliver results that surpassed our expectations. Without a doubt, Wakil is a valuable asset to any development team.'
   },
   {
-    quote: 'All that we see or seem is but a dream within a dream.',
-    name: 'Edgar Allan Poe',
-    title: 'A Dream Within a Dream',
+    name: 'Isreal Agaku',
+    job: 'Upwork Client',
+    testimony: 'Wakil professionalism and expertise were evident from our first interaction. He took the time to understand our unique needs and delivered a tailored solution that exceeded our expectations. His clear communication and timely updates throughout the project made the entire process seamless. His dedication to customer satisfaction and technical proficiency make him a standout choice for web development projects.'
   },
   {
-    quote:
-      'It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.',
-    name: 'Jane Austen',
-    title: 'Pride and Prejudice',
+    name: 'Michael Turner',
+    job: 'Web Developer',
+    testimony: "Collaborating with Wakil was a pleasure from start to finish. His problem solving skills and ability to translate complex technical concepts into layman's terms were invaluable. His proactive approach to problem-solving and attention to detail ensured that our project stayed on track and exceeded our objectives. I would highly recommend Wakil to anyone seeking a reliable and talented web developer."
   },
   {
-    quote:
-      'Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.',
-    name: 'Herman Melville',
-    title: 'Moby-Dick',
-  },
+    name: 'Sophia Reynolds',
+    job: 'Upwork Client',
+    testimony: "Wakil professionalism and commitment to our cause were evident throughout our collaboration. He took the time to understand our organization's mission and goals, delivering a website that effectively communicated our message to our audience. His clear communication and responsiveness made it easy to collaborate remotely, despite the challenges of distance. I wholeheartedly endorse wakil for his exceptional skills and dedication."
+  }
 ];
 
 export function Testimonial() {
@@ -50,15 +46,15 @@ export function Testimonial() {
         {testimonials.map((item) => (
           <li
             key={item.name}
-            className='relative h-[300px] w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-slate-700 bg-dark-600 px-8 py-6 md:w-[450px]'
+            className='relative h-[300px] w-[450px] max-w-full shrink-0 rounded-2xl border border-b-0 border-slate-700 bg-dark-600 px-8 py-6 max-sm:h-[350px] md:w-[550px]'
           >
             <blockquote>
               <div
                 aria-hidden='true'
                 className='pointer-events-none absolute -left-0.5 -top-0.5 size-[calc(100%_+_4px)]'
-              />1
+              />
               <span className=' relative z-20 text-sm font-normal leading-[1.6]'>
-                {item.quote}
+                {item.testimony}
               </span>
               <div className='relative z-20 mt-6 flex flex-row items-center'>
                 <span className='flex flex-col gap-1'>
@@ -66,7 +62,7 @@ export function Testimonial() {
                     {item.name}
                   </span>
                   <span className=' text-sm font-normal leading-[1.6] text-gray-400'>
-                    {item.title}
+                    {item.job}
                   </span>
                 </span>
               </div>
