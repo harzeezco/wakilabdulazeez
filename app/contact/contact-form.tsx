@@ -104,6 +104,9 @@ export function ProfileForm() {
           setSuccess(true);
           setError(false);
           form.reset();
+            setTimeout(() => {
+            setSuccess(false);
+          }, 4000);
         },
         (error: any) => {
           setSuccess(false);

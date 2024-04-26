@@ -45,7 +45,7 @@ export function ProjectTab() {
   ];
 
   return (
-    <div className='relative mx-auto my-20 flex w-full max-w-5xl flex-col items-center justify-center [perspective:1000px] max-sm:h-[1850px] max-sm:py-7  sm:h-[2100px] lg:h-[1300px]'>
+    <div className='relative mx-auto my-20 flex w-full max-w-5xl flex-col items-center justify-center [perspective:1000px] max-sm:h-[1850px] max-sm:py-7  sm:h-[2200px] lg:h-[1300px]'>
       <Tabs tabs={tabs} />
     </div>
   );
@@ -55,9 +55,9 @@ export const CLIENTPROJECTS = [
   {
     name: 'PixelPro',
     description:
-      'AI platform for removing image background with high quality and customization. The images can also be download in HD quality and can be used in any application. Images can also be downloaded in different format e.g jpg, png, jpeg.',
+      'AI platform for removing image background with high quality and customization. The images can also be download in HD quality and can be used in any application. Images can also be downloaded in different format e.g jpg, webp, jpeg.',
     url: 'https://pixelproai.vercel.app/',
-    previewImage: 'pixelpro.png',
+    previewImage: 'pixelpro.webp',
     technologies: [
       'React',
       'Typescript',
@@ -73,7 +73,7 @@ export const CLIENTPROJECTS = [
     description:
       'A SaSS platform made for developers who want to improve User Experience of their applications. It also helps developers to build and maintain their applications faster by providing a well tested and use templates.',
     url: 'https://pulse-rose.vercel.app/',
-    previewImage: 'pulse.png',
+    previewImage: 'pulse.webp',
     technologies: [
       'React',
       'Next.js',
@@ -89,7 +89,7 @@ export const CLIENTPROJECTS = [
     description:
       'A Educational platform for learning tech skills e.g devops, cloud computing, and more. It also has some interesting features like admin panel, live chat, and many more.',
     url: 'https://tsr-academy.vercel.app/',
-    previewImage: 'tsr.png',
+    previewImage: 'tsr.webp',
     technologies: [
       'React',
       'Next.js',
@@ -111,7 +111,7 @@ export const NEXTJSPROJECTS = [
       'This is my portfolio. A website I build and design for myself using the latest technologies and frameworks. This was to showcase my skills and projects.',
     url: 'https://wakilabdulazeez.vercel.app/',
     githubUrl: 'https://github.com/harzeezco/wakilabdulazeez',
-    previewImage: 'my-portfolio.png',
+    previewImage: 'my-portfolio.webp',
     technologies: [
       'React',
       'Typescript',
@@ -127,7 +127,7 @@ export const NEXTJSPROJECTS = [
     description:
       'A SaSS platform made for developers who want to improve User Experience of their applications. It also helps developers to build and maintain their applications faster by providing a well tested and use templates.',
     url: 'https://pulse-rose.vercel.app/',
-    previewImage: 'pulse.png',
+    previewImage: 'pulse.webp',
     technologies: [
       'React',
       'Next.js',
@@ -143,7 +143,7 @@ export const NEXTJSPROJECTS = [
     description:
       'A Educational platform for learning tech skills e.g devops, cloud computing, and more. It also has some interesting features like admin panel, live chat, and many more.',
     url: 'https://tsr-academy.vercel.app/',
-    previewImage: 'tsr.png',
+    previewImage: 'tsr.webp',
     technologies: [
       'React',
       'Next.js',
@@ -165,8 +165,9 @@ export const REACTPROJECTS = [
       'A Landing page build to learn how React works and grasp the underlying work-force of React. Learn a ton of skills like state management, routing, and code splitting, Streaming with Suspense, and much more.',
     url: 'https://redact-tour.vercel.app/',
     githubUrl: 'https://github.com/harzeezco/Redact-Landing-page',
-    previewImage: 'redact.png',
+    previewImage: 'redact.webp',
     technologies: [
+            'Vite',
       'React',
       'Typescript',
       'TailwindCSS',
@@ -179,8 +180,9 @@ export const REACTPROJECTS = [
       'This platform is build for Sparkr Digital Agency to showcase their services using 3d, framer-motion animations and more.',
     url: 'https://sparkr-digitals.vercel.app/',
     githubUrl: 'https://github.com/harzeezco/sparkr-digital',
-    previewImage: 'sparkr.png',
+    previewImage: 'sparkr.webp',
     technologies: [
+        'Vite',
       'React',
       'Typescript',
       'Express.js',
@@ -188,24 +190,22 @@ export const REACTPROJECTS = [
       'TailwindCSS',
       'framer motion',
       'Threejs',
-      'Gsap'
+      'Gsap',
+      'eslint',
     ],
   },
   {
     name: 'Quiz Grad',
     description:
-      'A platform for accessing real-time open banking and energy data to help you grow your business, backed with scalable back-end infrastructure.',
+      'A Website is build to test your knowledge in coding. It has a beautiful design and is fully responsive. It also has a quiz system which helps you to test your knowledge.',
     url: 'https://quizgraad.vercel.app/',
     githubUrl: 'https://github.com/harzeezco/quizgraad',
-    previewImage: 'redact.png',
+    previewImage: 'quiz-grad.webp',
     technologies: [
+      'Vite',
       'React',
-      'Next.js',
-      'Typescript',
+      'eslint',
       'TailwindCSS',
-      'ShadCN',
-      'Express.js',
-      'MongoDB',
     ],
   },
 ];
@@ -217,7 +217,7 @@ export const HTMLPROJECTS = [
       'A Landing Page for a food made stuff. ',
     url: 'https://geritch-foods.vercel.app/',
     githubUrl: 'https://github.com/harzeezco/Geritch-Foods',
-    previewImage: 'geritch.png',
+    previewImage: 'geritch.webp',
     technologies: [
       'Html',
       'CSS',
@@ -229,7 +229,7 @@ export const HTMLPROJECTS = [
       'A Landing Page for a foods business which is based on HtMl.',
     url: 'https://foodie-foods.vercel.app/',
     githubUrl: 'https://github.com/harzeezco/foodie',
-    previewImage: 'foodie.png',
+    previewImage: 'foodie.webp',
     technologies: [
      'Html',
       'CSS',
@@ -241,19 +241,19 @@ export const HTMLPROJECTS = [
       'A SaSS landing page for a software solutions company.',
     url: 'https://softsas.vercel.app/',
     githubUrl: 'https://github.com/harzeezco/Softsas',
-    previewImage: 'softsas.png',
+    previewImage: 'softsas.webp',
     technologies: [
        'Html',
       'CSS',
     ],
   },
     {
-    name: 'Softsas',
+    name: 'Sollutry',
     description:
       'A SaSS landing page for a software solutions company.',
     url: 'https://sollutry.vercel.app/',
     githubUrl: 'https://github.com/harzeezco/sollutry',
-    previewImage: 'softsas.png',
+    previewImage: 'sollutry.webp',
     technologies: [
        'Html',
       'CSS',
@@ -263,7 +263,7 @@ export const HTMLPROJECTS = [
 
 export function ClientTab() {
   return (
-    <div className='flex flex-col gap-y-10 max-lg:mt-10 md:gap-y-16'>
+    <div className='flex flex-col gap-y-10 max-lg:mt-10'>
       {CLIENTPROJECTS?.map((project, index) => (
         <ProjectDetails
           key={index}
@@ -277,7 +277,7 @@ export function ClientTab() {
 
 export function NextJsTab() {
   return (
-    <div className='flex flex-col gap-y-10 max-lg:mt-10 md:gap-y-16'>
+    <div className='flex flex-col gap-y-10 max-lg:mt-10'>
       {NEXTJSPROJECTS?.map((project, index) => (
         <ProjectDetails
           key={index}
@@ -291,7 +291,7 @@ export function NextJsTab() {
 
 export function ReactTab() {
   return (
-    <div className='flex flex-col gap-y-10 max-lg:mt-10 md:gap-y-16'>
+    <div className='flex flex-col gap-y-16 max-lg:mt-10'>
       {REACTPROJECTS?.map((project, index) => (
         <ProjectDetails
           key={index}

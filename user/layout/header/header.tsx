@@ -176,6 +176,7 @@ function Card({
         href={href}
         rel='noopener noreferrer'
         target={externalLink ? '_blank' : '_self'}
+        title={title}
       >
         <div
           className='size-10 rounded-full p-2'
@@ -185,7 +186,7 @@ function Card({
         >
           {icon}
         </div>
-        <h4 className='text-sm font-semibold uppercase' title={title}>
+        <h4 className='text-sm font-semibold uppercase'>
           {title}
         </h4>
       </Link>
